@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<<<<<<< HEAD
     <device id="retina3_5" orientation="portrait" appearance="light"/>
+=======
+    <device id="retina3_5" orientation="portrait" appearance="dark"/>
+>>>>>>> dev
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,7 +15,11 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+<<<<<<< HEAD
                 <viewController storyboardIdentifier="VCOne" id="BYZ-38-t0r" customClass="ViewController" customModule="LessonOne" sceneMemberID="viewController">
+=======
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LessonOne" customModuleProvider="target" sceneMemberID="viewController">
+>>>>>>> dev
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,7 +88,11 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+<<<<<<< HEAD
                         <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+=======
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+>>>>>>> dev
                         <constraints>
                             <constraint firstItem="Jbw-fG-U9A" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5ql-T2-U4n"/>
                             <constraint firstAttribute="bottom" secondItem="Jbw-fG-U9A" secondAttribute="bottom" id="Hfs-KT-SnF"/>
@@ -89,16 +101,24 @@
                             <constraint firstItem="Jbw-fG-U9A" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gtE-Jl-SeZ"/>
                         </constraints>
                     </view>
+<<<<<<< HEAD
                     <navigationItem key="navigationItem" id="hrr-Re-5ce"/>
                     <connections>
                         <outlet property="loginTextField" destination="baH-rq-dk4" id="IUM-GH-ZCH"/>
                         <outlet property="passwordTextField" destination="03F-nR-mcb" id="XFh-nH-SXl"/>
                         <outlet property="scrolView" destination="Jbw-fG-U9A" id="nkA-l1-bmM"/>
                         <segue destination="ku2-zU-yUv" kind="show" id="xuA-r4-leq"/>
+=======
+                    <connections>
+                        <outlet property="loginTextField" destination="baH-rq-dk4" id="IUM-GH-ZCH"/>
+                        <outlet property="passwordTextField" destination="03F-nR-mcb" id="XFh-nH-SXl"/>
+                        <outlet property="scrolView" destination="Jbw-fG-U9A" id="m8e-fs-lT2"/>
+>>>>>>> dev
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="146" y="615"/>
         </scene>
         <!--Tab Bar Contorller-->
@@ -371,5 +391,17 @@
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+=======
+            <point key="canvasLocation" x="-32.307692307692307" y="115.87677725118483"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+>>>>>>> dev
     </resources>
 </document>
