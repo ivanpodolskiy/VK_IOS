@@ -7,12 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
 		CE6BC17326EE9B9B00D9E012 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6BC17226EE9B9B00D9E012 /* ProfileViewController.swift */; };
 		CE7759CF26EAAE5A00A552D7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7759CE26EAAE5A00A552D7 /* SecondViewController.swift */; };
 		CE7759D126EAB5AF00A552D7 /* TabBarContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7759D026EAB5AF00A552D7 /* TabBarContorller.swift */; };
-=======
->>>>>>> dev
 		CEC717C826E3928C00CD9EAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC717C726E3928C00CD9EAD /* AppDelegate.swift */; };
 		CEC717CA26E3928C00CD9EAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC717C926E3928C00CD9EAD /* SceneDelegate.swift */; };
 		CEC717CC26E3928C00CD9EAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC717CB26E3928C00CD9EAD /* ViewController.swift */; };
@@ -23,12 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
 		CE6BC17226EE9B9B00D9E012 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CE7759CE26EAAE5A00A552D7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		CE7759D026EAB5AF00A552D7 /* TabBarContorller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContorller.swift; sourceTree = "<group>"; };
-=======
->>>>>>> dev
 		CEC717C426E3928C00CD9EAD /* LessonOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LessonOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC717C726E3928C00CD9EAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEC717C926E3928C00CD9EAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,10 +48,7 @@
 		CEC717BB26E3928C00CD9EAD = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				CE6BC17226EE9B9B00D9E012 /* ProfileViewController.swift */,
-=======
->>>>>>> dev
 				CEC717C626E3928C00CD9EAD /* LessonOne */,
 				CEC717C526E3928C00CD9EAD /* Products */,
 			);
@@ -75,15 +66,10 @@
 			isa = PBXGroup;
 			children = (
 				CEC717C726E3928C00CD9EAD /* AppDelegate.swift */,
-<<<<<<< HEAD
 				CE7759D026EAB5AF00A552D7 /* TabBarContorller.swift */,
 				CE7759CE26EAAE5A00A552D7 /* SecondViewController.swift */,
 				CEC717CB26E3928C00CD9EAD /* ViewController.swift */,
 				CEC717C926E3928C00CD9EAD /* SceneDelegate.swift */,
-=======
-				CEC717C926E3928C00CD9EAD /* SceneDelegate.swift */,
-				CEC717CB26E3928C00CD9EAD /* ViewController.swift */,
->>>>>>> dev
 				CEC717CD26E3928D00CD9EAD /* Main.storyboard */,
 				CEC717D326E3929000CD9EAD /* Assets.xcassets */,
 				CEC717D526E3929000CD9EAD /* LaunchScreen.storyboard */,
@@ -166,12 +152,9 @@
 				CEC717D226E3928D00CD9EAD /* LessonOne.xcdatamodeld in Sources */,
 				CEC717CC26E3928C00CD9EAD /* ViewController.swift in Sources */,
 				CEC717C826E3928C00CD9EAD /* AppDelegate.swift in Sources */,
-<<<<<<< HEAD
 				CE7759D126EAB5AF00A552D7 /* TabBarContorller.swift in Sources */,
 				CE6BC17326EE9B9B00D9E012 /* ProfileViewController.swift in Sources */,
 				CE7759CF26EAAE5A00A552D7 /* SecondViewController.swift in Sources */,
-=======
->>>>>>> dev
 				CEC717CA26E3928C00CD9EAD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

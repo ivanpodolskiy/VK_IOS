@@ -8,13 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-<<<<<<< HEAD
    
    
-=======
-    
-  
->>>>>>> dev
     @IBOutlet private weak var scrolView: UIScrollView!
     
     @IBOutlet private weak var loginTextField: UITextField!
@@ -71,7 +66,6 @@ class ViewController: UIViewController {
          
     }
     
-<<<<<<< HEAD
     func showAlert() {
         let alert = UIAlertController(title: "Ошибка", message: "Неверные данные для входа", preferredStyle: .alert)
         let actionAlert = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -81,8 +75,6 @@ class ViewController: UIViewController {
     }
     
     
-=======
->>>>>>> dev
     @IBAction private func onButtonPressed(_ sender: Any) {
        
         let login = self.loginTextField.text
@@ -90,7 +82,6 @@ class ViewController: UIViewController {
         
         
         if login == ("admin") && password == ("123456") {
-<<<<<<< HEAD
             let tabBarController = self.storyboard?.instantiateViewController(identifier: "tb") as! TabBarContorller
             present(tabBarController, animated: true, completion: nil)
         }  else {
@@ -98,12 +89,6 @@ class ViewController: UIViewController {
         }
         
         
-=======
-            print ("Вы вошли в аккаунт")
-        }  else {
-            print ("Неверные данные для входа")
-        }
->>>>>>> dev
      
     }
 }
