@@ -7,22 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE15FFA326F741C400CF18D2 /* AllGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15FFA226F741C400CF18D2 /* AllGroupViewController.swift */; };
+		CE15FFA926F77FB300CF18D2 /* AllGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15FFA826F77FB300CF18D2 /* AllGroupCell.swift */; };
+		CE15FFB226F7E15000CF18D2 /* MyGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15FFB126F7E15000CF18D2 /* MyGroupViewController.swift */; };
+		CE15FFB426F7E16400CF18D2 /* MyGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15FFB326F7E16400CF18D2 /* MyGroupCell.swift */; };
 		CE6BC17326EE9B9B00D9E012 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6BC17226EE9B9B00D9E012 /* ProfileViewController.swift */; };
 		CE7759CF26EAAE5A00A552D7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7759CE26EAAE5A00A552D7 /* SecondViewController.swift */; };
 		CE7759D126EAB5AF00A552D7 /* TabBarContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7759D026EAB5AF00A552D7 /* TabBarContorller.swift */; };
+		CEB215D026F4246D00BE4754 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB215CF26F4246D00BE4754 /* FriendsViewController.swift */; };
+		CEB215D226F4252500BE4754 /* R.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB215D126F4252500BE4754 /* R.swift */; };
+		CEB215D526F4257300BE4754 /* FirendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB215D326F4257300BE4754 /* FirendsTableViewCell.swift */; };
+		CEB215D626F4257300BE4754 /* FirendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB215D426F4257300BE4754 /* FirendsTableViewCell.xib */; };
+		CEB215D826F42C9100BE4754 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC717CD26E3928D00CD9EAD /* Main.storyboard */; };
 		CEC717C826E3928C00CD9EAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC717C726E3928C00CD9EAD /* AppDelegate.swift */; };
 		CEC717CA26E3928C00CD9EAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC717C926E3928C00CD9EAD /* SceneDelegate.swift */; };
 		CEC717CC26E3928C00CD9EAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC717CB26E3928C00CD9EAD /* ViewController.swift */; };
-		CEC717CF26E3928D00CD9EAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC717CD26E3928D00CD9EAD /* Main.storyboard */; };
 		CEC717D226E3928D00CD9EAD /* LessonOne.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEC717D026E3928D00CD9EAD /* LessonOne.xcdatamodeld */; };
 		CEC717D426E3929000CD9EAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC717D326E3929000CD9EAD /* Assets.xcassets */; };
 		CEC717D726E3929000CD9EAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC717D526E3929000CD9EAD /* LaunchScreen.storyboard */; };
+		CED376CF26F4FB63004B0979 /* ProfileFriendsViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED376CE26F4FB63004B0979 /* ProfileFriendsViewControllers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE15FFA226F741C400CF18D2 /* AllGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupViewController.swift; sourceTree = "<group>"; };
+		CE15FFA826F77FB300CF18D2 /* AllGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupCell.swift; sourceTree = "<group>"; };
+		CE15FFB126F7E15000CF18D2 /* MyGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupViewController.swift; sourceTree = "<group>"; };
+		CE15FFB326F7E16400CF18D2 /* MyGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupCell.swift; sourceTree = "<group>"; };
 		CE6BC17226EE9B9B00D9E012 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CE7759CE26EAAE5A00A552D7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		CE7759D026EAB5AF00A552D7 /* TabBarContorller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContorller.swift; sourceTree = "<group>"; };
+		CEB215CF26F4246D00BE4754 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		CEB215D126F4252500BE4754 /* R.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.swift; sourceTree = "<group>"; };
+		CEB215D326F4257300BE4754 /* FirendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirendsTableViewCell.swift; sourceTree = "<group>"; };
+		CEB215D426F4257300BE4754 /* FirendsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirendsTableViewCell.xib; sourceTree = "<group>"; };
 		CEC717C426E3928C00CD9EAD /* LessonOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LessonOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC717C726E3928C00CD9EAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEC717C926E3928C00CD9EAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +49,7 @@
 		CEC717D326E3929000CD9EAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEC717D626E3929000CD9EAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEC717D826E3929000CD9EAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CED376CE26F4FB63004B0979 /* ProfileFriendsViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFriendsViewControllers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,10 +63,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE15FFB026F7E0F900CF18D2 /* AllGroup */ = {
+			isa = PBXGroup;
+			children = (
+				CE15FFA226F741C400CF18D2 /* AllGroupViewController.swift */,
+				CE15FFA826F77FB300CF18D2 /* AllGroupCell.swift */,
+			);
+			path = AllGroup;
+			sourceTree = "<group>";
+		};
+		CE15FFB526F7E16B00CF18D2 /* MyGroup */ = {
+			isa = PBXGroup;
+			children = (
+				CE15FFB126F7E15000CF18D2 /* MyGroupViewController.swift */,
+				CE15FFB326F7E16400CF18D2 /* MyGroupCell.swift */,
+			);
+			path = MyGroup;
+			sourceTree = "<group>";
+		};
+		CEB215CA26F422AA00BE4754 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CED376CE26F4FB63004B0979 /* ProfileFriendsViewControllers.swift */,
+				CE7759CE26EAAE5A00A552D7 /* SecondViewController.swift */,
+				CE6BC17226EE9B9B00D9E012 /* ProfileViewController.swift */,
+				CE7759D026EAB5AF00A552D7 /* TabBarContorller.swift */,
+				CEC717CB26E3928C00CD9EAD /* ViewController.swift */,
+				CEB215CF26F4246D00BE4754 /* FriendsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CEB215D726F4258200BE4754 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CEB215D326F4257300BE4754 /* FirendsTableViewCell.swift */,
+				CEB215D426F4257300BE4754 /* FirendsTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		CEC717BB26E3928C00CD9EAD = {
 			isa = PBXGroup;
 			children = (
-				CE6BC17226EE9B9B00D9E012 /* ProfileViewController.swift */,
 				CEC717C626E3928C00CD9EAD /* LessonOne */,
 				CEC717C526E3928C00CD9EAD /* Products */,
 			);
@@ -65,12 +122,14 @@
 		CEC717C626E3928C00CD9EAD /* LessonOne */ = {
 			isa = PBXGroup;
 			children = (
-				CEC717C726E3928C00CD9EAD /* AppDelegate.swift */,
-				CE7759D026EAB5AF00A552D7 /* TabBarContorller.swift */,
-				CE7759CE26EAAE5A00A552D7 /* SecondViewController.swift */,
-				CEC717CB26E3928C00CD9EAD /* ViewController.swift */,
-				CEC717C926E3928C00CD9EAD /* SceneDelegate.swift */,
 				CEC717CD26E3928D00CD9EAD /* Main.storyboard */,
+				CE15FFB026F7E0F900CF18D2 /* AllGroup */,
+				CE15FFB526F7E16B00CF18D2 /* MyGroup */,
+				CEB215CA26F422AA00BE4754 /* Controllers */,
+				CEB215D726F4258200BE4754 /* Cell */,
+				CEC717C726E3928C00CD9EAD /* AppDelegate.swift */,
+				CEB215D126F4252500BE4754 /* R.swift */,
+				CEC717C926E3928C00CD9EAD /* SceneDelegate.swift */,
 				CEC717D326E3929000CD9EAD /* Assets.xcassets */,
 				CEC717D526E3929000CD9EAD /* LaunchScreen.storyboard */,
 				CEC717D826E3929000CD9EAD /* Info.plist */,
@@ -137,8 +196,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEC717D726E3929000CD9EAD /* LaunchScreen.storyboard in Resources */,
+				CEB215D626F4257300BE4754 /* FirendsTableViewCell.xib in Resources */,
 				CEC717D426E3929000CD9EAD /* Assets.xcassets in Resources */,
-				CEC717CF26E3928D00CD9EAD /* Main.storyboard in Resources */,
+				CEB215D826F42C9100BE4754 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,11 +209,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE15FFA326F741C400CF18D2 /* AllGroupViewController.swift in Sources */,
+				CED376CF26F4FB63004B0979 /* ProfileFriendsViewControllers.swift in Sources */,
+				CE15FFB226F7E15000CF18D2 /* MyGroupViewController.swift in Sources */,
+				CE15FFA926F77FB300CF18D2 /* AllGroupCell.swift in Sources */,
+				CEB215D026F4246D00BE4754 /* FriendsViewController.swift in Sources */,
 				CEC717D226E3928D00CD9EAD /* LessonOne.xcdatamodeld in Sources */,
 				CEC717CC26E3928C00CD9EAD /* ViewController.swift in Sources */,
+				CEB215D226F4252500BE4754 /* R.swift in Sources */,
 				CEC717C826E3928C00CD9EAD /* AppDelegate.swift in Sources */,
+				CE15FFB426F7E16400CF18D2 /* MyGroupCell.swift in Sources */,
 				CE7759D126EAB5AF00A552D7 /* TabBarContorller.swift in Sources */,
 				CE6BC17326EE9B9B00D9E012 /* ProfileViewController.swift in Sources */,
+				CEB215D526F4257300BE4754 /* FirendsTableViewCell.swift in Sources */,
 				CE7759CF26EAAE5A00A552D7 /* SecondViewController.swift in Sources */,
 				CEC717CA26E3928C00CD9EAD /* SceneDelegate.swift in Sources */,
 			);
