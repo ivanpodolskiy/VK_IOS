@@ -18,11 +18,27 @@ class FriendsViewController: UIViewController {
         self.TableView.register(R.Nib.friendsNib, forCellReuseIdentifier: R.cell.friendsCell)
         self.getDate()
         
+//        self.appleyShadowView(viewView)
     }
+    
+//  var viewView = ViewFriends()
+//
+//
+//    func appleyShadowView(_ view: UIView) {
+//        view.layer.cornerRadius = 32
+//        view.layer.shadowColor = UIColor.black.cgColor
+//        view.layer.shadowOpacity = 1
+//        view.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
+//        view.layer.shadowRadius = 5
+//
+//
+//        view.layer.masksToBounds = false
+//
+//    }
     
     private func getDate(){
         let mocItems: [DisplayItem] = [
-            .init(name: " Morty", avatar: #imageLiteral(resourceName: "58f37701a4fa116215a9240c")),
+            .init(name: " Morty", avatar: #imageLiteral(resourceName: "mmortyy")),
             .init(name: "Shrimp Morty", avatar: #imageLiteral(resourceName: "MortyShrimp")),
             .init(name: "Rick", avatar: #imageLiteral(resourceName: "Rick")),
             .init(name: "Birdperson", avatar: #imageLiteral(resourceName: "birdperson-"))]
