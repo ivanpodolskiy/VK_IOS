@@ -26,6 +26,8 @@
 		CEC717D426E3929000CD9EAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC717D326E3929000CD9EAD /* Assets.xcassets */; };
 		CEC717D726E3929000CD9EAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC717D526E3929000CD9EAD /* LaunchScreen.storyboard */; };
 		CED376CF26F4FB63004B0979 /* ProfileFriendsViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED376CE26F4FB63004B0979 /* ProfileFriendsViewControllers.swift */; };
+		CEFE3E1326FF461A006F3CF0 /* ViewFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE3E1226FF461A006F3CF0 /* ViewFriends.swift */; };
+		CEFE3E1526FF4B99006F3CF0 /* imageFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE3E1426FF4B99006F3CF0 /* imageFriends.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		CEC717D626E3929000CD9EAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEC717D826E3929000CD9EAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CED376CE26F4FB63004B0979 /* ProfileFriendsViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFriendsViewControllers.swift; sourceTree = "<group>"; };
+		CEFE3E1226FF461A006F3CF0 /* ViewFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFriends.swift; sourceTree = "<group>"; };
+		CEFE3E1426FF4B99006F3CF0 /* imageFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageFriends.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,28 +85,6 @@
 			path = MyGroup;
 			sourceTree = "<group>";
 		};
-		CEB215CA26F422AA00BE4754 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				CED376CE26F4FB63004B0979 /* ProfileFriendsViewControllers.swift */,
-				CE7759CE26EAAE5A00A552D7 /* SecondViewController.swift */,
-				CE6BC17226EE9B9B00D9E012 /* ProfileViewController.swift */,
-				CE7759D026EAB5AF00A552D7 /* TabBarContorller.swift */,
-				CEC717CB26E3928C00CD9EAD /* ViewController.swift */,
-				CEB215CF26F4246D00BE4754 /* FriendsViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		CEB215D726F4258200BE4754 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				CEB215D326F4257300BE4754 /* FirendsTableViewCell.swift */,
-				CEB215D426F4257300BE4754 /* FirendsTableViewCell.xib */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
 		CEC717BB26E3928C00CD9EAD = {
 			isa = PBXGroup;
 			children = (
@@ -123,19 +105,59 @@
 			isa = PBXGroup;
 			children = (
 				CEC717CD26E3928D00CD9EAD /* Main.storyboard */,
+				CEC717CB26E3928C00CD9EAD /* ViewController.swift */,
+				CE6BC17226EE9B9B00D9E012 /* ProfileViewController.swift */,
+				CEFE3E1A2700AC41006F3CF0 /* Friends */,
 				CE15FFB026F7E0F900CF18D2 /* AllGroup */,
 				CE15FFB526F7E16B00CF18D2 /* MyGroup */,
-				CEB215CA26F422AA00BE4754 /* Controllers */,
-				CEB215D726F4258200BE4754 /* Cell */,
 				CEC717C726E3928C00CD9EAD /* AppDelegate.swift */,
 				CEB215D126F4252500BE4754 /* R.swift */,
 				CEC717C926E3928C00CD9EAD /* SceneDelegate.swift */,
+				CE7759CE26EAAE5A00A552D7 /* SecondViewController.swift */,
+				CE7759D026EAB5AF00A552D7 /* TabBarContorller.swift */,
 				CEC717D326E3929000CD9EAD /* Assets.xcassets */,
 				CEC717D526E3929000CD9EAD /* LaunchScreen.storyboard */,
 				CEC717D826E3929000CD9EAD /* Info.plist */,
 				CEC717D026E3928D00CD9EAD /* LessonOne.xcdatamodeld */,
 			);
 			path = LessonOne;
+			sourceTree = "<group>";
+		};
+		CEFE3E1A2700AC41006F3CF0 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				CEFE3E1C2700AC78006F3CF0 /* layoutSubviews */,
+				CEFE3E1B2700AC5B006F3CF0 /* cell */,
+				CEFE3E1D2700AC9C006F3CF0 /* Controllers */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		CEFE3E1B2700AC5B006F3CF0 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				CEB215D426F4257300BE4754 /* FirendsTableViewCell.xib */,
+				CEB215D326F4257300BE4754 /* FirendsTableViewCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		CEFE3E1C2700AC78006F3CF0 /* layoutSubviews */ = {
+			isa = PBXGroup;
+			children = (
+				CEFE3E1426FF4B99006F3CF0 /* imageFriends.swift */,
+				CEFE3E1226FF461A006F3CF0 /* ViewFriends.swift */,
+			);
+			path = layoutSubviews;
+			sourceTree = "<group>";
+		};
+		CEFE3E1D2700AC9C006F3CF0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEB215CF26F4246D00BE4754 /* FriendsViewController.swift */,
+				CED376CE26F4FB63004B0979 /* ProfileFriendsViewControllers.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,9 +238,11 @@
 				CEB215D026F4246D00BE4754 /* FriendsViewController.swift in Sources */,
 				CEC717D226E3928D00CD9EAD /* LessonOne.xcdatamodeld in Sources */,
 				CEC717CC26E3928C00CD9EAD /* ViewController.swift in Sources */,
+				CEFE3E1326FF461A006F3CF0 /* ViewFriends.swift in Sources */,
 				CEB215D226F4252500BE4754 /* R.swift in Sources */,
 				CEC717C826E3928C00CD9EAD /* AppDelegate.swift in Sources */,
 				CE15FFB426F7E16400CF18D2 /* MyGroupCell.swift in Sources */,
+				CEFE3E1526FF4B99006F3CF0 /* imageFriends.swift in Sources */,
 				CE7759D126EAB5AF00A552D7 /* TabBarContorller.swift in Sources */,
 				CE6BC17326EE9B9B00D9E012 /* ProfileViewController.swift in Sources */,
 				CEB215D526F4257300BE4754 /* FirendsTableViewCell.swift in Sources */,
