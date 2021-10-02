@@ -23,7 +23,7 @@ class AllGroupCell: UITableViewCell{
 }
 
 
-struct DisplayGroup {
+struct DisplayGroup: Equatable {
     let name: String
     let image: UIImage
 }

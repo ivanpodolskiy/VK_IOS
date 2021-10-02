@@ -8,21 +8,31 @@
 import UIKit
 
 class AllGroupViewController: UIViewController {
+ 
+    
     
     @IBOutlet weak var tableView: UITableView!
     
-//    var name = [
-//    "1", "2", "3"]
-//    var image: [UIImage] = [ #imageLiteral(resourceName: "MortyShrimp"), #imageLiteral(resourceName: "Rick"), #imageLiteral(resourceName: "Pickle Rick")]
-    
     override func viewDidLoad() {
-        super.viewDidLoad()
+        
 //        self.tableView.register(UINib(nibName: "MyGroupCell", bundle: nil), forCellReuseIdentifier: "MGC")
+     
+        
+        
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        
         self.getDate()
+        super.viewDidLoad()
     }
   
     var displayGroup:[DisplayGroup] = []
-
+     var fillterNames = [DisplayGroup]()
+    
+    
     
     private func getDate() {
         let mocItems: [DisplayGroup] = [
@@ -34,6 +44,21 @@ class AllGroupViewController: UIViewController {
         self.displayGroup = mocItems
         self.tableView.reloadData()
     }
+    
+    
+    
+     let searchController = UISearchController(searchResultsController: nil)
+    
+    
+    private var searchBarISEmpty: Bool {
+        guard let text = searchController.searchBar.text else { return false}
+        return text.isEmpty
+    }
+    
+    private var isFiltering: Bool {
+        return searchController.isActive && !searchBarISEmpty
+    }
+    
 }
 
 
@@ -41,12 +66,28 @@ class AllGroupViewController: UIViewController {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        return name.count
+        
+        if isFiltering {
+            return fillterNames.count
+        }
         return self.displayGroup.count
     }
         
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    tableView.dequeueReusableCell(withIdentifier: "AGC", for: indexPath) as! AllGroupCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AGC", for: indexPath) as! AllGroupCell
+        
+        var restaurantDisplayGroup: DisplayGroup
+        
+        if isFiltering {
+            restaurantDisplayGroup = fillterNames[indexPath.row]
+        }
+        else {
+            restaurantDisplayGroup = displayGroup[indexPath.row]
+        }
+        
+        cell.configureter(with: restaurantDisplayGroup)
+       return cell
 //        cell.configure(with: MyGroupCell.DisplayIthem)
 //        cell.configure(with: self.displayIthem[indexPath.row])
 //        let title = name[indexPath.row]
@@ -56,20 +97,30 @@ class AllGroupViewController: UIViewController {
 //        return cell
 //
     }
+   
 }
-//
+
 extension AllGroupViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        (cell as? AllGroupCell)?.configureter(with: self.displayGroup[indexPath.row])
+    
+
+//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        (cell as? AllGroupCell)?.configureter(with: fillterNames[indexPath.row])
+//    }
+}
+
+extension AllGroupViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+
+    private func filterContentForSearchText(_ serachText: String) {
+        
+        fillterNames = displayGroup.filter({ (displayGroup: DisplayGroup)  -> Bool in
+            return displayGroup.name.lowercased().contains(serachText.lowercased())
+        })
+        tableView.reloadData()
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        switch editingStyle {
-        case .delete:
-            self.displayGroup.remove(at: indexPath.row)
-            self.tableView.deleteRows(at: [indexPath], with: .automatic)
-        default:
-            break
-        }
-    }
+
 }

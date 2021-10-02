@@ -11,7 +11,7 @@ class FriendsViewController: UIViewController {
     
     @IBOutlet weak var TableView: UITableView!
     
-    private var displayIthem: [DisplayItem] = []
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +36,9 @@ class FriendsViewController: UIViewController {
 //
 //    }
     
+    
+    private var displayIthem: [DisplayItem] = []
+    
     private func getDate(){
         let mocItems: [DisplayItem] = [
             .init(name: " Morty", avatar: #imageLiteral(resourceName: "mmortyy")),
@@ -46,9 +49,17 @@ class FriendsViewController: UIViewController {
                 self.displayIthem = mocItems
                 self.TableView.reloadData()
                 
+                
             }
-        
     }
+    
+    
+//    func createNamesDict() {
+//        for nam in displayIthem.name {
+//            
+//            
+//        }
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "pf" {

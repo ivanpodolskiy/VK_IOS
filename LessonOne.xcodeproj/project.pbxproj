@@ -11,9 +11,7 @@
 		CE15FFA926F77FB300CF18D2 /* AllGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15FFA826F77FB300CF18D2 /* AllGroupCell.swift */; };
 		CE15FFB226F7E15000CF18D2 /* MyGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15FFB126F7E15000CF18D2 /* MyGroupViewController.swift */; };
 		CE15FFB426F7E16400CF18D2 /* MyGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15FFB326F7E16400CF18D2 /* MyGroupCell.swift */; };
-		CE6BC17326EE9B9B00D9E012 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6BC17226EE9B9B00D9E012 /* ProfileViewController.swift */; };
-		CE7759CF26EAAE5A00A552D7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7759CE26EAAE5A00A552D7 /* SecondViewController.swift */; };
-		CE7759D126EAB5AF00A552D7 /* TabBarContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7759D026EAB5AF00A552D7 /* TabBarContorller.swift */; };
+		CE864C6A2708D70800E9CF26 /* TabBarContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE864C692708D70800E9CF26 /* TabBarContorller.swift */; };
 		CEB215D026F4246D00BE4754 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB215CF26F4246D00BE4754 /* FriendsViewController.swift */; };
 		CEB215D226F4252500BE4754 /* R.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB215D126F4252500BE4754 /* R.swift */; };
 		CEB215D526F4257300BE4754 /* FirendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB215D326F4257300BE4754 /* FirendsTableViewCell.swift */; };
@@ -35,9 +33,7 @@
 		CE15FFA826F77FB300CF18D2 /* AllGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupCell.swift; sourceTree = "<group>"; };
 		CE15FFB126F7E15000CF18D2 /* MyGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupViewController.swift; sourceTree = "<group>"; };
 		CE15FFB326F7E16400CF18D2 /* MyGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupCell.swift; sourceTree = "<group>"; };
-		CE6BC17226EE9B9B00D9E012 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		CE7759CE26EAAE5A00A552D7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		CE7759D026EAB5AF00A552D7 /* TabBarContorller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContorller.swift; sourceTree = "<group>"; };
+		CE864C692708D70800E9CF26 /* TabBarContorller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContorller.swift; sourceTree = "<group>"; };
 		CEB215CF26F4246D00BE4754 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		CEB215D126F4252500BE4754 /* R.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.swift; sourceTree = "<group>"; };
 		CEB215D326F4257300BE4754 /* FirendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirendsTableViewCell.swift; sourceTree = "<group>"; };
@@ -85,6 +81,16 @@
 			path = MyGroup;
 			sourceTree = "<group>";
 		};
+		CE864C682708D63700E9CF26 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CEC717CD26E3928D00CD9EAD /* Main.storyboard */,
+				CEC717CB26E3928C00CD9EAD /* ViewController.swift */,
+				CE864C692708D70800E9CF26 /* TabBarContorller.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		CEC717BB26E3928C00CD9EAD = {
 			isa = PBXGroup;
 			children = (
@@ -104,17 +110,13 @@
 		CEC717C626E3928C00CD9EAD /* LessonOne */ = {
 			isa = PBXGroup;
 			children = (
-				CEC717CD26E3928D00CD9EAD /* Main.storyboard */,
-				CEC717CB26E3928C00CD9EAD /* ViewController.swift */,
-				CE6BC17226EE9B9B00D9E012 /* ProfileViewController.swift */,
+				CE864C682708D63700E9CF26 /* Main */,
 				CEFE3E1A2700AC41006F3CF0 /* Friends */,
 				CE15FFB026F7E0F900CF18D2 /* AllGroup */,
 				CE15FFB526F7E16B00CF18D2 /* MyGroup */,
 				CEC717C726E3928C00CD9EAD /* AppDelegate.swift */,
 				CEB215D126F4252500BE4754 /* R.swift */,
 				CEC717C926E3928C00CD9EAD /* SceneDelegate.swift */,
-				CE7759CE26EAAE5A00A552D7 /* SecondViewController.swift */,
-				CE7759D026EAB5AF00A552D7 /* TabBarContorller.swift */,
 				CEC717D326E3929000CD9EAD /* Assets.xcassets */,
 				CEC717D526E3929000CD9EAD /* LaunchScreen.storyboard */,
 				CEC717D826E3929000CD9EAD /* Info.plist */,
@@ -243,10 +245,8 @@
 				CEC717C826E3928C00CD9EAD /* AppDelegate.swift in Sources */,
 				CE15FFB426F7E16400CF18D2 /* MyGroupCell.swift in Sources */,
 				CEFE3E1526FF4B99006F3CF0 /* imageFriends.swift in Sources */,
-				CE7759D126EAB5AF00A552D7 /* TabBarContorller.swift in Sources */,
-				CE6BC17326EE9B9B00D9E012 /* ProfileViewController.swift in Sources */,
+				CE864C6A2708D70800E9CF26 /* TabBarContorller.swift in Sources */,
 				CEB215D526F4257300BE4754 /* FirendsTableViewCell.swift in Sources */,
-				CE7759CF26EAAE5A00A552D7 /* SecondViewController.swift in Sources */,
 				CEC717CA26E3928C00CD9EAD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
