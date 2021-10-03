@@ -13,26 +13,64 @@ class MyGroupViewController: UIViewController {
     @IBOutlet weak var tableViewMy: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
     }
+    
+    
+    func showAlertGroup() {
+        let alert = UIAlertController(title: "ОЙ", message: "Вы уже состоите в данной группе ", preferredStyle: .alert)
+        let actionAlert = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        
+        alert.addAction(actionAlert)
+        present(alert, animated: true, completion: nil)
+    }
+     
+    
+    
     
     @IBAction func addGroup(segue: UIStoryboardSegue){
         
     
         if segue.identifier == "addGroup" {
             guard let allGroupCntroller = segue.source as? AllGroupViewController else { return }
-            if let indexPath = allGroupCntroller.tableView.indexPathForSelectedRow {
-                let groupp = allGroupCntroller.displayGroup[indexPath.row]
-//                if dispayGroupMy.contains(displayGroup)
-//                {
-                    dispayGroupMy.append(groupp)
-                    tableViewMy.reloadData()
-//                }
+            
+            
+            if allGroupCntroller.fillterNames .isEmpty {
+                if let indexPath = allGroupCntroller.tableView.indexPathForSelectedRow {
+                    let displayGroup = allGroupCntroller.displayGroup[indexPath.row]
+                    
+                    if dispayGroupMy.contains(displayGroup) {
+                        print (1)
+                        showAlertGroup()
+                    } else {
+                        print (2)
+                        dispayGroupMy.append(displayGroup)
+                        tableViewMy.reloadData()
+                    }
                 }
+            } else {
+            
+                    if let indexPath = allGroupCntroller.tableView.indexPathForSelectedRow {
+                        let fillterNames = allGroupCntroller.fillterNames[indexPath.row]
+                        
+                        if dispayGroupMy.contains(fillterNames) {
+                            print (1)
+                            showAlertGroup()
+                        } else {
+                            print (2)
+                            dispayGroupMy.append(fillterNames)
+                            tableViewMy.reloadData()
+                        }
+                    }
+                    
+                
             }
+            
+        }
         }
     
-   
-    
+
 
     
     var dispayGroupMy: [DisplayGroup] = []
@@ -54,5 +92,16 @@ extension MyGroupViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         (cell as? MyGroupCell)?.config(with: self.dispayGroupMy[indexPath.row])
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+        case .delete:
+            self.dispayGroupMy.remove(at: indexPath.row)
+            self.tableViewMy.deleteRows(at: [indexPath], with: .automatic)
+
+        default:
+            break
+        }
     }
 }
