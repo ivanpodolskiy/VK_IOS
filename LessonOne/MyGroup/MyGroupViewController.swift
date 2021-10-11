@@ -63,12 +63,10 @@ class MyGroupViewController: UIViewController {
                             tableViewMy.reloadData()
                         }
                     }
-                    
-                
             }
-            
         }
-        }
+        
+    }
     
 
 

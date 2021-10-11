@@ -19,12 +19,13 @@ class imageFriends: UIImageView {
        super.init(coder: aDecoder)
     }
     
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.layer.borderWidth = 1
+        self.layer.borderWidth = 0.3
         self.layer.masksToBounds = false
-        self.layer.borderColor = UIColor.white.cgColor
+        self.layer.borderColor = UIColor.black.cgColor
+        
         self.layer.cornerRadius = self.frame.size.width/2
     
         self.clipsToBounds = true

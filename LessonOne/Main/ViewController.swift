@@ -81,7 +81,7 @@ class ViewController: UIViewController {
         let password = self.passwordTextField.text
         
         
-        if login == ("admin") && password == ("123456") {
+        if login == ("1") && password == ("1") {
             let tabBarController = self.storyboard?.instantiateViewController(identifier: "tb") as! TabBarContorller
             present(tabBarController, animated: true, completion: nil)
         }  else {
