@@ -81,7 +81,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Jbw-fG-U9A" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5ql-T2-U4n"/>
                             <constraint firstAttribute="bottom" secondItem="Jbw-fG-U9A" secondAttribute="bottom" id="Hfs-KT-SnF"/>
@@ -92,9 +92,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="hrr-Re-5ce"/>
                     <connections>
+                        <outlet property="buttonOutlet" destination="cfQ-Xn-HqB" id="OSe-ZR-D5M"/>
+                        <outlet property="loginLabel" destination="0e0-dn-tlv" id="XFc-CB-zWi"/>
                         <outlet property="loginTextField" destination="baH-rq-dk4" id="IUM-GH-ZCH"/>
+                        <outlet property="passwordLabel" destination="2s0-ZC-Pej" id="H44-BD-3Zv"/>
                         <outlet property="passwordTextField" destination="03F-nR-mcb" id="XFh-nH-SXl"/>
                         <outlet property="scrolView" destination="Jbw-fG-U9A" id="nkA-l1-bmM"/>
+                        <outlet property="weatherLabel" destination="8nH-3q-Ecj" id="Nm1-r8-Y9c"/>
                         <segue destination="ku2-zU-yUv" kind="show" id="xuA-r4-leq"/>
                     </connections>
                 </viewController>
@@ -117,6 +121,7 @@
                     <connections>
                         <segue destination="cls-oE-yGb" kind="relationship" relationship="viewControllers" id="80I-iv-2vo"/>
                         <segue destination="VBd-tu-hkI" kind="relationship" relationship="viewControllers" id="v1e-yp-KH1"/>
+                        <segue destination="mWy-4W-wdW" kind="relationship" relationship="viewControllers" id="XQZ-gX-EOS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5w7-eL-SXr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -131,8 +136,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="C2Y-03-7VA" userLabel="Table Viiew">
-                                <rect key="frame" x="20" y="118" width="374" height="665"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="30" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="C2Y-03-7VA" userLabel="Table Viiew">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="3I8-Qe-MOJ" id="VUS-DY-psq"/>
@@ -143,10 +148,10 @@
                         <viewLayoutGuide key="safeArea" id="t6y-om-GCp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="C2Y-03-7VA" firstAttribute="top" secondItem="t6y-om-GCp" secondAttribute="top" constant="30" id="6UU-Kc-S92"/>
-                            <constraint firstItem="C2Y-03-7VA" firstAttribute="leading" secondItem="t6y-om-GCp" secondAttribute="leading" constant="20" id="JqB-vV-phV"/>
-                            <constraint firstItem="t6y-om-GCp" firstAttribute="bottom" secondItem="C2Y-03-7VA" secondAttribute="bottom" constant="30" id="d5p-eZ-dXp"/>
-                            <constraint firstItem="t6y-om-GCp" firstAttribute="trailing" secondItem="C2Y-03-7VA" secondAttribute="trailing" constant="20" id="fr0-eD-HzK"/>
+                            <constraint firstItem="C2Y-03-7VA" firstAttribute="trailing" secondItem="t6y-om-GCp" secondAttribute="trailing" id="EDC-Tg-P9w"/>
+                            <constraint firstItem="C2Y-03-7VA" firstAttribute="top" secondItem="t6y-om-GCp" secondAttribute="top" id="XJA-eV-TP2"/>
+                            <constraint firstItem="C2Y-03-7VA" firstAttribute="bottom" secondItem="t6y-om-GCp" secondAttribute="bottom" id="a8Z-Z3-EUD"/>
+                            <constraint firstItem="C2Y-03-7VA" firstAttribute="leading" secondItem="t6y-om-GCp" secondAttribute="leading" id="s18-04-Tmk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Друзья" id="Gq0-v0-NRa"/>
@@ -157,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oA2-tP-o1l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="237" y="2132"/>
+            <point key="canvasLocation" x="236.23188405797103" y="2131.4732142857142"/>
         </scene>
         <!--Группы-->
         <scene sceneID="vNG-iP-CmK">
@@ -198,7 +203,7 @@
         <!--Профиль-->
         <scene sceneID="QGN-Id-Oyf">
             <objects>
-                <viewController storyboardIdentifier="pf" modalPresentationStyle="fullScreen" id="l4T-Rp-pfS" customClass="ProfileFriendsViewControllers" customModule="LessonOne" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="pf" modalPresentationStyle="fullScreen" id="l4T-Rp-pfS" customClass="ProfileFriendsViewController" customModule="LessonOne" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ra3-EN-h4n" customClass="ProfileFriendsViewController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -434,10 +439,46 @@
             </objects>
             <point key="canvasLocation" x="1247.6635514018692" y="2917.7105831533481"/>
         </scene>
+        <!--Новости-->
+        <scene sceneID="rMq-TU-PTd">
+            <objects>
+                <viewController id="mWy-4W-wdW" customClass="NewsPageViewController" customModule="LessonOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kQK-WX-4jj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cdr-st-Bk1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="mWy-4W-wdW" id="OBf-uI-bnY"/>
+                                    <outlet property="delegate" destination="mWy-4W-wdW" id="YK3-Pd-dG8"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WqI-yO-Shn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cdr-st-Bk1" firstAttribute="leading" secondItem="WqI-yO-Shn" secondAttribute="leading" id="21f-es-uWI"/>
+                            <constraint firstItem="cdr-st-Bk1" firstAttribute="trailing" secondItem="WqI-yO-Shn" secondAttribute="trailing" id="Njy-aK-NW8"/>
+                            <constraint firstAttribute="bottom" secondItem="cdr-st-Bk1" secondAttribute="bottom" id="QX2-W3-IpI"/>
+                            <constraint firstItem="cdr-st-Bk1" firstAttribute="top" secondItem="kQK-WX-4jj" secondAttribute="top" id="oGz-1z-3XQ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Новости" image="newspaper" catalog="system" id="l4y-BT-T6E"/>
+                    <connections>
+                        <outlet property="newsTableVIew" destination="cdr-st-Bk1" id="s59-js-Xie"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sO0-Qx-keG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2302.898550724638" y="1404.9107142857142"/>
+        </scene>
     </scenes>
     <color key="tintColor" systemColor="systemPinkColor"/>
     <resources>
         <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="newspaper" catalog="system" width="128" height="108"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="plus" catalog="system" width="128" height="113"/>
@@ -446,9 +487,6 @@
         </systemColor>
         <systemColor name="secondarySystemFillColor">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="secondarySystemGroupedBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
