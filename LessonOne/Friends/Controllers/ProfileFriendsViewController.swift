@@ -23,6 +23,7 @@ class ProfileFriendsViewController: UIViewController {
         avatarProfile.image = UIImage(named: itemUpdate)
     }
     
+  
     
     @IBOutlet weak var nameProfile: UILabel!
     @IBOutlet weak var avatarProfile: UIImageView!
@@ -35,7 +36,7 @@ class ProfileFriendsViewController: UIViewController {
         view.addGestureRecognizer(tapGestureRecognizer)
         view.layer.cornerRadius = 5
         view.layer.borderWidth = 1
-        view.layer.borderColor = UIColor.red.cgColor
+//        view.layer.borderColor = UIColor.black.cgColor
     }
     
     lazy var tapGestureRecognizer: UIGestureRecognizer = {
@@ -46,6 +47,7 @@ class ProfileFriendsViewController: UIViewController {
         
     }()
     
+   
     var counter: Bool = true
     
     @objc func onTap(_ gesture: UIGestureRecognizer) {
@@ -53,20 +55,36 @@ class ProfileFriendsViewController: UIViewController {
         if counter == true {
             print (1)
             self.numberLikes.text = "1"
-            self.numberLikes.textColor = UIColor.red
+           
             self.heartButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-            self.heartButton.tintColor = UIColor.red
+            
+            UIView.animate(withDuration: 0.8, animations: {
+                self.heartButton.tintColor = .red
+                self.numberLikes.textColor = .red
+            })
+            self.viewDisplayLike.layer.borderColor = UIColor.red.cgColor
+            
             counter = false
             
         } else {
             print (0)
             self.numberLikes.text = "0"
-            self.numberLikes.textColor = UIColor.black
+         
             self.heartButton.setImage(UIImage(systemName: "heart"), for: .normal)
-            self.heartButton.tintColor = UIColor.black
+            
+            UIView.animate(withDuration: 0.8, animations: {
+                self.heartButton.tintColor = .black
+                self.numberLikes.textColor = .black
+            })
+            self.viewDisplayLike.layer.borderColor = UIColor.black.cgColor
+   
             counter = true
         }
     }
+    
+
+   
+   
 }
 
 

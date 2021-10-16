@@ -92,9 +92,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="hrr-Re-5ce"/>
                     <connections>
+                        <outlet property="buttonOutlet" destination="cfQ-Xn-HqB" id="OSe-ZR-D5M"/>
+                        <outlet property="loginLabel" destination="0e0-dn-tlv" id="XFc-CB-zWi"/>
                         <outlet property="loginTextField" destination="baH-rq-dk4" id="IUM-GH-ZCH"/>
+                        <outlet property="passwordLabel" destination="2s0-ZC-Pej" id="H44-BD-3Zv"/>
                         <outlet property="passwordTextField" destination="03F-nR-mcb" id="XFh-nH-SXl"/>
                         <outlet property="scrolView" destination="Jbw-fG-U9A" id="nkA-l1-bmM"/>
+                        <outlet property="weatherLabel" destination="8nH-3q-Ecj" id="Nm1-r8-Y9c"/>
                         <segue destination="ku2-zU-yUv" kind="show" id="xuA-r4-leq"/>
                     </connections>
                 </viewController>
