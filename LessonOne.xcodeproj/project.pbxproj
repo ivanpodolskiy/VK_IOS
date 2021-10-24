@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,17 @@
 		CE15FFB226F7E15000CF18D2 /* MyGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15FFB126F7E15000CF18D2 /* MyGroupViewController.swift */; };
 		CE15FFB426F7E16400CF18D2 /* MyGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15FFB326F7E16400CF18D2 /* MyGroupCell.swift */; };
 		CE33E27B271B30500031B1F7 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33E27A271B30500031B1F7 /* Session.swift */; };
+		CE33E281271C4E640031B1F7 /* new.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33E280271C4E640031B1F7 /* new.swift */; };
+		CE42C10F272317BF00103E04 /* FriendsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42C10E272317BF00103E04 /* FriendsAPI.swift */; };
+		CE42C112272427F800103E04 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE42C111272427F800103E04 /* Alamofire */; };
+		CE42C1142724283300103E04 /* GroupsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42C1132724283300103E04 /* GroupsAPI.swift */; };
+		CE42C116272428CA00103E04 /* SearchGropsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42C115272428CA00103E04 /* SearchGropsAPI.swift */; };
+		CE42C118272428F800103E04 /* PhotoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42C117272428F800103E04 /* PhotoAPI.swift */; };
+		CE42C11A2724295900103E04 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42C1192724295900103E04 /* AuthViewController.swift */; };
+		CE42C11C2724389900103E04 /* PhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42C11B2724389900103E04 /* PhotoTableViewController.swift */; };
+		CE42C11E272438DA00103E04 /* SearchGroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42C11D272438DA00103E04 /* SearchGroupsTableViewController.swift */; };
+		CE42C120272438FB00103E04 /* GroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42C11F272438FB00103E04 /* GroupsTableViewController.swift */; };
+		CE42C1222724392500103E04 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42C1212724392500103E04 /* FriendsTableViewController.swift */; };
 		CE864C6A2708D70800E9CF26 /* TabBarContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE864C692708D70800E9CF26 /* TabBarContorller.swift */; };
 		CE864C6C270A2DB300E9CF26 /* NewsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE864C6B270A2DB300E9CF26 /* NewsPageViewController.swift */; };
 		CE864C70270A2F8700E9CF26 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE864C6E270A2F8700E9CF26 /* NewsTableViewCell.swift */; };
@@ -38,6 +49,16 @@
 		CE15FFB126F7E15000CF18D2 /* MyGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupViewController.swift; sourceTree = "<group>"; };
 		CE15FFB326F7E16400CF18D2 /* MyGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupCell.swift; sourceTree = "<group>"; };
 		CE33E27A271B30500031B1F7 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		CE33E280271C4E640031B1F7 /* new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = new.swift; sourceTree = "<group>"; };
+		CE42C10E272317BF00103E04 /* FriendsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAPI.swift; sourceTree = "<group>"; };
+		CE42C1132724283300103E04 /* GroupsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsAPI.swift; sourceTree = "<group>"; };
+		CE42C115272428CA00103E04 /* SearchGropsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGropsAPI.swift; sourceTree = "<group>"; };
+		CE42C117272428F800103E04 /* PhotoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPI.swift; sourceTree = "<group>"; };
+		CE42C1192724295900103E04 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		CE42C11B2724389900103E04 /* PhotoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewController.swift; sourceTree = "<group>"; };
+		CE42C11D272438DA00103E04 /* SearchGroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGroupsTableViewController.swift; sourceTree = "<group>"; };
+		CE42C11F272438FB00103E04 /* GroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewController.swift; sourceTree = "<group>"; };
+		CE42C1212724392500103E04 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
 		CE864C692708D70800E9CF26 /* TabBarContorller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContorller.swift; sourceTree = "<group>"; };
 		CE864C6B270A2DB300E9CF26 /* NewsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPageViewController.swift; sourceTree = "<group>"; };
 		CE864C6E270A2F8700E9CF26 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
@@ -65,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE42C112272427F800103E04 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,12 +111,37 @@
 			path = MyGroup;
 			sourceTree = "<group>";
 		};
-		CE33E279271B2FD70031B1F7 /* Session */ = {
+		CE33E279271B2FD70031B1F7 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				CE33E27A271B30500031B1F7 /* Session.swift */,
+				CE42C10E272317BF00103E04 /* FriendsAPI.swift */,
+				CE42C117272428F800103E04 /* PhotoAPI.swift */,
+				CE42C1132724283300103E04 /* GroupsAPI.swift */,
+				CE42C115272428CA00103E04 /* SearchGropsAPI.swift */,
 			);
-			path = Session;
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CE42C10C2723177000103E04 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CE42C1192724295900103E04 /* AuthViewController.swift */,
+				CE42C11B2724389900103E04 /* PhotoTableViewController.swift */,
+				CE42C11D272438DA00103E04 /* SearchGroupsTableViewController.swift */,
+				CE42C11F272438FB00103E04 /* GroupsTableViewController.swift */,
+				CE42C1212724392500103E04 /* FriendsTableViewController.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CE42C10D2723178100103E04 /* vk-api */ = {
+			isa = PBXGroup;
+			children = (
+				CE33E279271B2FD70031B1F7 /* Service */,
+				CE42C10C2723177000103E04 /* Modules */,
+			);
+			path = "vk-api";
 			sourceTree = "<group>";
 		};
 		CE864C682708D63700E9CF26 /* Main */ = {
@@ -130,6 +177,7 @@
 			children = (
 				CEC717C626E3928C00CD9EAD /* LessonOne */,
 				CEC717C526E3928C00CD9EAD /* Products */,
+				CE33E280271C4E640031B1F7 /* new.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,7 +192,7 @@
 		CEC717C626E3928C00CD9EAD /* LessonOne */ = {
 			isa = PBXGroup;
 			children = (
-				CE33E279271B2FD70031B1F7 /* Session */,
+				CE42C10D2723178100103E04 /* vk-api */,
 				CE864C682708D63700E9CF26 /* Main */,
 				CEFE3E1A2700AC41006F3CF0 /* Friends */,
 				CE15FFB026F7E0F900CF18D2 /* AllGroup */,
@@ -214,6 +262,9 @@
 			dependencies = (
 			);
 			name = LessonOne;
+			packageProductDependencies = (
+				CE42C111272427F800103E04 /* Alamofire */,
+			);
 			productName = LessonOne;
 			productReference = CEC717C426E3928C00CD9EAD /* LessonOne.app */;
 			productType = "com.apple.product-type.application";
@@ -241,6 +292,9 @@
 				Base,
 			);
 			mainGroup = CEC717BB26E3928C00CD9EAD;
+			packageReferences = (
+				CE42C110272427F800103E04 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = CEC717C526E3928C00CD9EAD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -270,13 +324,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE42C116272428CA00103E04 /* SearchGropsAPI.swift in Sources */,
+				CE42C1142724283300103E04 /* GroupsAPI.swift in Sources */,
+				CE33E281271C4E640031B1F7 /* new.swift in Sources */,
 				CE864C6C270A2DB300E9CF26 /* NewsPageViewController.swift in Sources */,
+				CE42C11A2724295900103E04 /* AuthViewController.swift in Sources */,
 				CE15FFA326F741C400CF18D2 /* AllGroupViewController.swift in Sources */,
 				CED376CF26F4FB63004B0979 /* ProfileFriendsViewController.swift in Sources */,
 				CE15FFB226F7E15000CF18D2 /* MyGroupViewController.swift in Sources */,
 				CE15FFA926F77FB300CF18D2 /* AllGroupCell.swift in Sources */,
 				CEB215D026F4246D00BE4754 /* FriendsViewController.swift in Sources */,
+				CE42C118272428F800103E04 /* PhotoAPI.swift in Sources */,
 				CEC717D226E3928D00CD9EAD /* LessonOne.xcdatamodeld in Sources */,
+				CE42C11C2724389900103E04 /* PhotoTableViewController.swift in Sources */,
 				CEC717CC26E3928C00CD9EAD /* ViewController.swift in Sources */,
 				CE33E27B271B30500031B1F7 /* Session.swift in Sources */,
 				CEFE3E1326FF461A006F3CF0 /* ViewFriends.swift in Sources */,
@@ -284,10 +344,14 @@
 				CEC717C826E3928C00CD9EAD /* AppDelegate.swift in Sources */,
 				CE15FFB426F7E16400CF18D2 /* MyGroupCell.swift in Sources */,
 				CEFE3E1526FF4B99006F3CF0 /* imageFriends.swift in Sources */,
+				CE42C120272438FB00103E04 /* GroupsTableViewController.swift in Sources */,
 				CE864C6A2708D70800E9CF26 /* TabBarContorller.swift in Sources */,
+				CE42C10F272317BF00103E04 /* FriendsAPI.swift in Sources */,
 				CE864C70270A2F8700E9CF26 /* NewsTableViewCell.swift in Sources */,
 				CEB215D526F4257300BE4754 /* FirendsTableViewCell.swift in Sources */,
 				CEC717CA26E3928C00CD9EAD /* SceneDelegate.swift in Sources */,
+				CE42C1222724392500103E04 /* FriendsTableViewController.swift in Sources */,
+				CE42C11E272438DA00103E04 /* SearchGroupsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +553,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE42C110272427F800103E04 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE42C111272427F800103E04 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE42C110272427F800103E04 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		CEC717D026E3928D00CD9EAD /* LessonOne.xcdatamodeld */ = {
