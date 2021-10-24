@@ -10,17 +10,34 @@ import UIKit
 class GroupsTableViewController: UITableViewController {
     let groupService = GroupsAPI()
     
+<<<<<<< Updated upstream
     override func viewDidLoad() {
         super.viewDidLoad()
         groupService.getGroups { grops in
             print ("Получили группы в контроллере")
             
+=======
+    var groups: [GroupsJSON] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        groupService.getGroups { groups in
+            print ("Получили группы в контроллере")
+            
+            self.groups = groups
+            self.tableView.reloadData()
+            
+            
+>>>>>>> Stashed changes
         }
         
     }
 
     // MARK: - Table view data source
 
+<<<<<<< Updated upstream
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
@@ -86,4 +103,26 @@ class GroupsTableViewController: UITableViewController {
     }
     */
 
+=======
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return groups.count
+    }
+
+ 
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let itemGroups = groups[indexPath.row]
+        let url = URL(string: itemGroups.photo50)
+        if let data = try? Data(contentsOf: url!) {
+            cell.imageView?.image = UIImage(data: data)
+        }
+        
+        cell.textLabel?.text = itemGroups.name
+      
+        
+        return cell
+    }
+>>>>>>> Stashed changes
 }

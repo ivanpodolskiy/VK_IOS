@@ -11,16 +11,33 @@ class SearchGroupsTableViewController: UITableViewController {
 
     let searchGropsService = SearchGropsAPI()
     
+<<<<<<< Updated upstream
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchGropsService.searchGroups { group in
             print ("получили группы из поиска в контроллере")
+=======
+    var searchGroup: [SearchGropsJSON] = []
+        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        searchGropsService.searchGroups { searchGroup in
+            
+            
+            print ("получили группы из поиска в контроллере")
+            self.searchGroup = searchGroup
+            self.tableView.reloadData()
+         
+>>>>>>> Stashed changes
         }
     }
 
     // MARK: - Table view data source
 
+<<<<<<< Updated upstream
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
@@ -85,5 +102,28 @@ class SearchGroupsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+=======
+ 
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       
+        return searchGroup.count
+        
+    }
+
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+
+        let itemSeachGroup = searchGroup[indexPath.row]
+        
+        let url = URL(string: itemSeachGroup.photo50)
+        if let data = try? Data(contentsOf: url!) {
+            cell.imageView?.image = UIImage(data: data)
+        }
+        cell.textLabel?.text = itemSeachGroup.name
+        return cell
+    }
+>>>>>>> Stashed changes
 
 }

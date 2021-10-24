@@ -11,16 +11,34 @@ class FriendsTableViewController: UITableViewController {
     
     let friendsService = FriendsAPI()
     
+<<<<<<< Updated upstream
     override func viewDidLoad() {
         super.viewDidLoad()
         
         friendsService.getFriends { friends in
             print ("получили друзей в контроллере")
+=======
+    var friends: [FriendsJSON] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+        
+        friendsService.getFriends { friends in
+            
+          
+            print ("получили друзей в контроллере")
+            self.friends = friends
+            self.tableView.reloadData()
+>>>>>>> Stashed changes
         }
     }
 
     // MARK: - Table view data source
 
+<<<<<<< Updated upstream
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
@@ -35,11 +53,38 @@ class FriendsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
+=======
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return friends.count    }
+
+  
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+
+        let itemFrinds = friends[indexPath.row]
+        
+        let url = URL(string: itemFrinds.photo50)
+        if let data = try? Data(contentsOf: url!) {
+            cell.imageView?.image = UIImage(data: data)
+        }
+        cell.textLabel?.text = itemFrinds.fullName
+        
+>>>>>>> Stashed changes
         // Configure the cell...
 
         return cell
     }
+<<<<<<< Updated upstream
     */
+=======
+
+>>>>>>> Stashed changes
 
     /*
     // Override to support conditional editing of the table view.
