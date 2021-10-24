@@ -8,24 +8,32 @@
 import UIKit
 
 
+protocol BControllerDelegate: AnyObject{
+    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage?
+}
 
-
-class NewsPageViewController: UIViewController {
+class NewsPageViewController: UIViewController{
  
+  
+    weak var delegate: BControllerDelegate?
     
     @IBOutlet weak var newsTableVIew: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         newsTableVIew.register(UINib(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: "NewsTableViewCell")
+    
     }
+    
+   
     
     
     let itemNews: [displayNewsItem] = [
-        .init(name: "Morty", iamgeAvatr: #imageLiteral(resourceName: "Morty"), imageNews: #imageLiteral(resourceName: "travel"), text: "Сегодня плавал на байдарке"),
-        .init(name: "Rick", iamgeAvatr: #imageLiteral(resourceName: "Rick"), imageNews: #imageLiteral(resourceName: "image"), text: "Смотрите какое фото!"),
-        .init(name: "Naruto Uzumaki", iamgeAvatr: #imageLiteral(resourceName: "Naruto Uzumaki"), imageNews: #imageLiteral(resourceName: "japan2"), text: "Тут вкусный рамен")
+        .init(name: "Naruto Uzumaki", iamgeAvatr: #imageLiteral(resourceName: "Naruto Uzumaki"), imageNews: #imageLiteral(resourceName: "japanese"), text: "Вксуный рамен!!!"),
+        .init(name: "Rick", iamgeAvatr: #imageLiteral(resourceName: "Rick"), imageNews: #imageLiteral(resourceName: "newImage"), text: "Красивое место?")
     ]
 }
+
+
 
 
 extension NewsPageViewController: UITableViewDataSource {
@@ -45,5 +53,7 @@ extension NewsPageViewController: UITableViewDelegate {
         (cell as? NewsTableViewCell)?.configureNews(with: self.itemNews[indexPath.row])
     }
     
-   
+    func lol() {
+        
+    }
 }
