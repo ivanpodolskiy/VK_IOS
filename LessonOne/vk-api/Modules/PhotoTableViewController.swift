@@ -11,14 +11,32 @@ class PhotoTableViewController: UITableViewController {
 
     let getPhotoService = PhotoAPI()
     
+<<<<<<< Updated upstream
     override func viewDidLoad() {
         super.viewDidLoad()
         getPhotoService.getPhoto { photo in
             print ("получили фото в контроллере")
+=======
+    var photo: [PhotoJSON] = []
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+        getPhotoService.getPhoto { photo in
+            print ("получили фото в контроллере")
+            
+            self.photo = photo
+            self.tableView.reloadData()
+>>>>>>> Stashed changes
         }
     }
 
     // MARK: - Table view data source
+<<<<<<< Updated upstream
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -34,11 +52,39 @@ class PhotoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
+=======
+//
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return photo.count
+        
+    }
+
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        let itemsPhoto = photo[indexPath.row]
+        let url = URL(string: itemsPhoto.url)
+        if let data = try? Data(contentsOf: url!) {
+            cell.imageView?.image = UIImage(data: data)
+        }
+        
+>>>>>>> Stashed changes
         // Configure the cell...
 
         return cell
     }
+<<<<<<< Updated upstream
     */
+=======
+
+>>>>>>> Stashed changes
 
     /*
     // Override to support conditional editing of the table view.

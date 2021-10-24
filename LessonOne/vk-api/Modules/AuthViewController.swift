@@ -65,7 +65,11 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
     
         Session.shared.token = token
         Session.shared.userId = userId
+<<<<<<< Updated upstream
         performSegue(withIdentifier: "showFriendsSegue", sender: nil)
+=======
+        performSegue(withIdentifier: "showTabBarSegue", sender: nil)
+>>>>>>> Stashed changes
         decisionHandler(.cancel)
     }
 }
