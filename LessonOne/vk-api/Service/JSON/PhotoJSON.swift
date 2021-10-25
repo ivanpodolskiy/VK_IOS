@@ -2,12 +2,10 @@
 //  PhotoJSON.swift
 //  LessonOne
 //
-//  Created by user on 24.10.2021.
+//  Created by user on 25.10.2021.
 //
 
-
 import Foundation
-
 
 
 // MARK: - Size
