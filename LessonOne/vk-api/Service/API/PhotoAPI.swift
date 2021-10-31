@@ -8,9 +8,9 @@
 import Foundation
 import Alamofire
 
-struct Photo {
-    
-}
+//struct Photo {
+//    
+//}
 
 final class PhotoAPI{
     let baseUrl = "https://api.vk.com/method"
@@ -19,7 +19,7 @@ final class PhotoAPI{
     let version = "5.81"
     
     
-    func getPhoto(completion: @escaping([Photo]) -> ()) {
+    func getPhoto(completion: @escaping([PhotoBD]) -> ()) {
         let method = "/photos.getAll"
         
         let parametrs: Parameters = [
@@ -33,7 +33,9 @@ final class PhotoAPI{
         ]
         let url = baseUrl + method
         AF.request(url, method: .get, parameters: parametrs).responseJSON { response in
-            print (response.value)
+            
+            guard let data = response.data else {return}
+            debugPrint(response.data?.prettyJSON)
         }
     }
 }

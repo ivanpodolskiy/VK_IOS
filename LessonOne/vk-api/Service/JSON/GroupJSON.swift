@@ -6,14 +6,15 @@
 //
 
 import Foundation
+import RealmSwift
 
 
 // MARK: - Item
-struct GroupsJSON: Codable {
-    let isMember, id: Int
-    let photo100: String
-    let isAdvertiser, isAdmin: Int
-    let photo50, photo200: String
+class GroupsBD: Object, Codable {
+    @objc dynamic let isMember, id: Int
+    @objc dynamic let photo100: String
+    @objc dynamic let isAdvertiser, isAdmin: Int
+    @objc dynamic let photo50, photo200: String
     
     let screenName, name: String
     let isClosed: Int

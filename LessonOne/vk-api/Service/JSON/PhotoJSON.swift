@@ -6,11 +6,11 @@
 //
 
 import Foundation
-
+import RealmSwift
 
 // MARK: - Size
-struct PhotoJSON: Codable {
-    let width, height: Int
-    let url: String
-    let type: String
+class PhotoBD: Object, Codable {
+   @objc dynamic let width, height: Int
+    @objc dynamic let url: String
+    @objc dynamic let type: String
 }

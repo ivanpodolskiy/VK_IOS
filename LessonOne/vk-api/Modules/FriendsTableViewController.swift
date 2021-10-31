@@ -10,13 +10,13 @@ import UIKit
 class FriendsTableViewController: UITableViewController {
     
     let friendsService = FriendsAPI()
-    var friends: [FriendsJSON] = []
+    var friends: [FriendsBD] = []
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         friendsService.getFriends { friends in
             print ("получили друзей в контроллере")
@@ -45,7 +45,7 @@ class FriendsTableViewController: UITableViewController {
             cell.imageView?.image = UIImage(data: data)
         }
         
-        cell.textLabel?.text = itemFriends.lastName
+        cell.textLabel?.text = itemFriends.fullName
         return cell
     }
 }

@@ -12,6 +12,12 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         authorizationToVkAPI()
+        
+        
+        if !Session.shared.token.isEmpty, Session.shared.userId > 0 {
+            performSegue(withIdentifier: "showTabBarSegue", sender: nil)
+            print ("Переход")
+        }
     }
     //https://oauth.vk.com/authorize
     
@@ -64,7 +70,7 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
         print (token as Any)
         
         Session.shared.token = token
-        Session.shared.userId = userId
+        Session.shared.userId = Int(userId) ?? 0
         performSegue(withIdentifier: "showTabBarSegue", sender: nil)
         decisionHandler(.cancel)
     }

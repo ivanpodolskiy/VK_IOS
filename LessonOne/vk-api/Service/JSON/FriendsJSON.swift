@@ -7,13 +7,14 @@
 
 
 import Foundation
+import RealmSwift
 
 
-struct FriendsJSON: Codable {
-    let id: Int
-    let lastName: String
-    let photo50: String
-    let firstName: String
+class FriendsBD: Object, Codable {
+    @objc dynamic let id: Int
+    @objc dynamic let lastName: String
+    @objc dynamic let photo50: String
+    @objc dynamic let firstName: String
     
     var fullName: String {
         
