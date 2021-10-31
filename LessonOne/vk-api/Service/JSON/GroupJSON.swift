@@ -1,24 +1,12 @@
 //
-//  GroupsJSON.swift
+//  GroupJSON.swift
 //  LessonOne
 //
-//  Created by user on 24.10.2021.
+//  Created by user on 25.10.2021.
 //
-
-//   let groupsJSON = try? newJSONDecoder().decode(GroupsJSON.self, from: jsonData)
 
 import Foundation
 
-// MARK: - GroupsJSON
-//struct GroupsJSON: Codable {
-//    let response: Response
-//}
-
-// MARK: - Response
-//struct Response: Codable {
-//    let count: Int
-//    let items: [Item]
-//}
 
 // MARK: - Item
 struct GroupsJSON: Codable {
@@ -26,10 +14,10 @@ struct GroupsJSON: Codable {
     let photo100: String
     let isAdvertiser, isAdmin: Int
     let photo50, photo200: String
-//    let type: TypeEnum
+    
     let screenName, name: String
     let isClosed: Int
-
+    
     enum CodingKeys: String, CodingKey {
         case isMember = "is_member"
         case id
@@ -38,14 +26,10 @@ struct GroupsJSON: Codable {
         case isAdmin = "is_admin"
         case photo50 = "photo_50"
         case photo200 = "photo_200"
-//        case type
+        
         case screenName = "screen_name"
         case name
         case isClosed = "is_closed"
     }
 }
 
-//enum TypeEnum: String, Codable {
-//    case group = "group"
-//    case page = "page"
-//}

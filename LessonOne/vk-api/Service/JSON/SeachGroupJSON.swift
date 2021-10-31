@@ -1,26 +1,14 @@
 //
-//  SearchGropsJSON.swift
+//  SeachGroupJSON.swift
 //  LessonOne
 //
-//  Created by user on 24.10.2021.
-
+//  Created by user on 25.10.2021.
+//
 
 import Foundation
 
 
 
-
-
-// MARK: - SearchGropsJSON
-//struct SearchGropsJSON: Codable {
-//    let response: Response
-//}
-
-// MARK: - Response
-//struct Response: Codable {
-//    let count: Int
-//    let items: [Item]
-//}
 
 // MARK: - Item
 struct SearchGropsJSON: Codable {
@@ -28,7 +16,7 @@ struct SearchGropsJSON: Codable {
     let photo100: String
     let isAdvertiser, isAdmin: Int
     let photo50, photo200: String
-//    let type: TypeEnum
+
     let screenName, name: String
     let isClosed: Int
 
@@ -40,13 +28,10 @@ struct SearchGropsJSON: Codable {
         case isAdmin = "is_admin"
         case photo50 = "photo_50"
         case photo200 = "photo_200"
-//        case type
+
         case screenName = "screen_name"
         case name
         case isClosed = "is_closed"
     }
 }
 
-//enum TypeEnum: String, Codable {
-//    case page = "page"
-//}

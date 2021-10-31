@@ -29,7 +29,7 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
         urlComponents.path = "/authorize"
         
         urlComponents.queryItems = [
-       
+            
             URLQueryItem(name: "client_id", value: "7979751"),
             URLQueryItem(name: "display", value: "mobile"),
             URLQueryItem(name: "redirect_uri", value: "https://oauth.vk.com/blank.html"),
@@ -37,7 +37,7 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
             URLQueryItem(name: "scope", value: "262150"),
             URLQueryItem(name: "response_type", value: "token"),
             URLQueryItem(name: "v", value: "5.68")
-       ]
+        ]
         let request = URLRequest(url: urlComponents.url!)
         webView.load(request)
     }
@@ -62,14 +62,10 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
         
         guard let token = params["access_token"], let userId = params["user_id"] else {return}
         print (token as Any)
-    
+        
         Session.shared.token = token
         Session.shared.userId = userId
-<<<<<<< Updated upstream
-        performSegue(withIdentifier: "showFriendsSegue", sender: nil)
-=======
         performSegue(withIdentifier: "showTabBarSegue", sender: nil)
->>>>>>> Stashed changes
         decisionHandler(.cancel)
     }
 }
