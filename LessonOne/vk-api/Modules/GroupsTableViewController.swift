@@ -10,7 +10,7 @@ import UIKit
 class GroupsTableViewController: UITableViewController {
     let groupService = GroupsAPI()
     
-    var groups: [GroupsJSON] = []
+    var groups: [GroupsBD] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
