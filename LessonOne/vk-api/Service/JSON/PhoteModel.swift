@@ -1,5 +1,5 @@
 //
-//  PhotoJSON.swift
+//  PhotoModel.swift
 //  LessonOne
 //
 //  Created by user on 25.10.2021.

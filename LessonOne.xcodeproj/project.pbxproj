@@ -29,7 +29,7 @@
 		CE42C14527261C7F00103E04 /* FriendsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42C14427261C7F00103E04 /* FriendsJSON.swift */; };
 		CE42C14827261CA000103E04 /* GroupJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42C14727261CA000103E04 /* GroupJSON.swift */; };
 		CE42C14A27261CBB00103E04 /* SeachGroupJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42C14927261CBB00103E04 /* SeachGroupJSON.swift */; };
-		CE42C14C27261CDD00103E04 /* PhotoJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42C14B27261CDD00103E04 /* PhotoJSON.swift */; };
+		CE42C14C27261CDD00103E04 /* PhoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42C14B27261CDD00103E04 /* PhoteModel.swift */; };
 		CE42C14F27261DBA00103E04 /* Data+PrattyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42C14E27261DBA00103E04 /* Data+PrattyJSON.swift */; };
 		CE42C15227261DF400103E04 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CE42C15127261DF400103E04 /* SwiftyJSON */; };
 		CE864C6A2708D70800E9CF26 /* TabBarContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE864C692708D70800E9CF26 /* TabBarContorller.swift */; };
@@ -71,7 +71,7 @@
 		CE42C14427261C7F00103E04 /* FriendsJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsJSON.swift; sourceTree = "<group>"; };
 		CE42C14727261CA000103E04 /* GroupJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupJSON.swift; sourceTree = "<group>"; };
 		CE42C14927261CBB00103E04 /* SeachGroupJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachGroupJSON.swift; sourceTree = "<group>"; };
-		CE42C14B27261CDD00103E04 /* PhotoJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoJSON.swift; sourceTree = "<group>"; };
+		CE42C14B27261CDD00103E04 /* PhoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoteModel.swift; sourceTree = "<group>"; };
 		CE42C14E27261DBA00103E04 /* Data+PrattyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+PrattyJSON.swift"; sourceTree = "<group>"; };
 		CE864C692708D70800E9CF26 /* TabBarContorller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContorller.swift; sourceTree = "<group>"; };
 		CE864C6B270A2DB300E9CF26 /* NewsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPageViewController.swift; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		CE42C10C2723177000103E04 /* Modules */ = {
+		CE42C10C2723177000103E04 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				CE42C1192724295900103E04 /* AuthViewController.swift */,
@@ -147,7 +147,7 @@
 				CE42C11D272438DA00103E04 /* SearchGroupsTableViewController.swift */,
 				CE42C11B2724389900103E04 /* PhotoTableViewController.swift */,
 			);
-			path = Modules;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		CE42C10D2723178100103E04 /* vk-api */ = {
@@ -155,7 +155,7 @@
 			children = (
 				CE42C14D27261D9F00103E04 /* Helpers */,
 				CE33E279271B2FD70031B1F7 /* Service */,
-				CE42C10C2723177000103E04 /* Modules */,
+				CE42C10C2723177000103E04 /* Controllers */,
 			);
 			path = "vk-api";
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 				CE42C14427261C7F00103E04 /* FriendsJSON.swift */,
 				CE42C14727261CA000103E04 /* GroupJSON.swift */,
 				CE42C14927261CBB00103E04 /* SeachGroupJSON.swift */,
-				CE42C14B27261CDD00103E04 /* PhotoJSON.swift */,
+				CE42C14B27261CDD00103E04 /* PhoteModel.swift */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -393,7 +393,7 @@
 				CE42C118272428F800103E04 /* PhotoAPI.swift in Sources */,
 				CEC717D226E3928D00CD9EAD /* LessonOne.xcdatamodeld in Sources */,
 				CE42C11C2724389900103E04 /* PhotoTableViewController.swift in Sources */,
-				CE42C14C27261CDD00103E04 /* PhotoJSON.swift in Sources */,
+				CE42C14C27261CDD00103E04 /* PhoteModel.swift in Sources */,
 				CEC717CC26E3928C00CD9EAD /* ViewController.swift in Sources */,
 				CE33E27B271B30500031B1F7 /* Session.swift in Sources */,
 				CEFE3E1326FF461A006F3CF0 /* ViewFriends.swift in Sources */,
