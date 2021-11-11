@@ -7,13 +7,31 @@
 
 
 import Foundation
-
-final class Session {
+import SwiftKeychainWrapper
+class Session {
     private init() {}
     
     static let shared = Session()
+   
     
-    var token: String = ""
-    var userId: String = ""
+    //UserDefaults
+    var userId: Int {
+        set {
+            UserDefaults.standard.set(newValue, forKey: "UserId")
+        } get {
+            return UserDefaults.standard.integer(forKey: "UserId")
+        }
+    }
+    
+        //Keychain
+    var token: String {
+        set {
+            KeychainWrapper.standard.set(newValue, forKey: "token")
+            
+        } get {
+            KeychainWrapper.standard.string(forKey: "token") ?? ""
+        }
+    }
+  
     
 }
