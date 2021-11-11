@@ -20,7 +20,11 @@ final class GroupsAPI {
     let userId = Session.shared.userId
     let version = "5.81"
     
+<<<<<<< HEAD
+    func getGroups(completion: @escaping([GroupsModel]) -> ()) {
+=======
     func getGroups(completion: @escaping([GroupsBD]) -> ()) {
+>>>>>>> main
         let method = "/groups.get"
         let parametrs: Parameters = [
             "access_token": token,
@@ -40,7 +44,11 @@ final class GroupsAPI {
             
             do {
                 let groupJSON = try JSON(data)["response"]["items"].rawData()
+<<<<<<< HEAD
+                let groups = try JSONDecoder().decode([GroupsModel].self, from: groupJSON)
+=======
                 let groups = try JSONDecoder().decode([GroupsBD].self, from: groupJSON)
+>>>>>>> main
                 
                 completion(groups)
             } catch {
