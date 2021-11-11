@@ -7,11 +7,7 @@
 
 import Foundation
 import Alamofire
-
-struct Groups {
-    
-
-}
+import SwiftyJSON
 
 final class SearchGropsAPI {
     let baseUrl = "https://api.vk.com/method"
@@ -20,7 +16,7 @@ final class SearchGropsAPI {
     let version = "5.81"
     let searchRequest = "Music"
     
-    func searchGroups(completion: @escaping([Groups]) -> ()) {
+    func searchGroups(completion: @escaping([SearchGropsJSON]) -> ()) {
         let method = "/groups.search"
         
         let parametrs: Parameters = [
@@ -30,7 +26,21 @@ final class SearchGropsAPI {
         ]
         let url = baseUrl + method
         AF.request(url, method: .get, parameters: parametrs).responseJSON { response in
-            print (response.value)
+            
+            guard let data = response.data else {return}
+            debugPrint(response.data?.prettyJSON)
+            //    print (response.value)
+            
+            do {
+                let searchGroupJSON = try JSON(data)["response"]["items"].rawData()
+                let searchGroup = try JSONDecoder().decode([SearchGropsJSON].self, from: searchGroupJSON)
+                
+                completion(searchGroup)
+                
+                
+            } catch {
+                print(error)
+            }
         }
     }
 }

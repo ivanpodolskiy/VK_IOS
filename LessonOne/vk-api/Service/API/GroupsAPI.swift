@@ -7,9 +7,10 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 struct Group {
-
+    
 }
 
 final class GroupsAPI {
@@ -19,14 +20,14 @@ final class GroupsAPI {
     let userId = Session.shared.userId
     let version = "5.81"
     
-    func getGroups(completion: @escaping([Group]) -> ()) {
+    func getGroups(completion: @escaping([GroupsBD]) -> ()) {
         let method = "/groups.get"
         let parametrs: Parameters = [
             "access_token": token,
             "user_id": userId,
-            "count": 10,
+            "count": 40,
             "v": version,
-//            "fields": "city",
+            //            "fields": "city",
             "extended": 1
             
         ]
@@ -34,7 +35,17 @@ final class GroupsAPI {
         let url = baseUrl + method
         AF.request(url, method: .get, parameters: parametrs).responseJSON { response in
             
-            print (response.value)
+            guard let data = response.data else {return}
+            debugPrint(response.data?.prettyJSON)
+            
+            do {
+                let groupJSON = try JSON(data)["response"]["items"].rawData()
+                let groups = try JSONDecoder().decode([GroupsBD].self, from: groupJSON)
+                
+                completion(groups)
+            } catch {
+                print (error)
+            }
         }
     }
 }
