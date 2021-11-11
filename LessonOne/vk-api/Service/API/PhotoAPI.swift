@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 //struct Photo {
 //    
@@ -19,7 +20,7 @@ final class PhotoAPI{
     let version = "5.81"
     
     
-    func getPhoto(completion: @escaping([PhotoBD]) -> ()) {
+    func getPhoto(completion: @escaping([PhotoModel]) -> ()) {
         let method = "/photos.getAll"
         
         let parametrs: Parameters = [
@@ -36,6 +37,15 @@ final class PhotoAPI{
             
             guard let data = response.data else {return}
             debugPrint(response.data?.prettyJSON)
+            
+            do {
+                let photoJSON = try JSON(data)["response"]["items"].rawData()
+                let photo = try JSONDecoder().decode([PhotoModel].self, from: photoJSON)
+                
+                completion(photo)
+            } catch {
+                print (error)
+            }
         }
     }
 }
