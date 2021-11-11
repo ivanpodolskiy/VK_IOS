@@ -28,7 +28,11 @@
 		<key>LessonOne.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD:VK_IOS-main-5/LessonOne.xcodeproj/xcuserdata/user.xcuserdatad/xcschemes/xcschememanagement.plist
 			<integer>1</integer>
+=======
+			<integer>0</integer>
+>>>>>>> dev:LessonOne.xcodeproj/xcuserdata/user.xcuserdatad/xcschemes/xcschememanagement.plist
 		</dict>
 		<key>Playground (Playground) 1.xcscheme</key>
 		<dict>
