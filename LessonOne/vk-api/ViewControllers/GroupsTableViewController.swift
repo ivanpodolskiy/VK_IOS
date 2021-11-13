@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class GroupsTableViewController: UITableViewController {
     let groupService = GroupsAPI()
+    let groupDB = GropsDB()
     
-    var groups: [GroupsBD] = []
+    var groupModel: [GroupsModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,10 +20,11 @@ class GroupsTableViewController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         groupService.getGroups { groups in
             print ("Получили группы в контроллере")
-            
-            self.groups = groups
+            self.groupDB.save(groups)
+            self.groupModel = self.groupDB.load()
             self.tableView.reloadData()
         }
+        
         
     }
     
@@ -31,15 +34,15 @@ class GroupsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return groups.count
+        return groupModel.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        let itemGrup = groups[indexPath.row]
+        let itemGrup = groupModel[indexPath.row]
         
-        let url = URL(string: itemGrup.photo50)
+        let url = URL(string: itemGrup.photo100)
         if let data = try? Data(contentsOf: url!) {
             cell.imageView?.image = UIImage(data: data)
         }

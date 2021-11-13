@@ -1,23 +1,23 @@
 //
-//  SeachGroupJSON.swift
+//  GroupsModel.swift
 //  LessonOne
 //
 //  Created by user on 25.10.2021.
 //
 
 import Foundation
-
-
+import RealmSwift
 
 
 // MARK: - Item
-struct SearchGropsJSON: Codable {
-    let isMember, id: Int
-    let photo100: String
-    let isAdvertiser, isAdmin: Int
-    let photo50, photo200: String
+class GroupsModel: Object, Codable {
+    @objc dynamic var isMember, id: Int
+    @objc dynamic var photo100: String
+    @objc dynamic var isAdvertiser, isAdmin: Int
+    @objc dynamic var photo50, photo200: String
 
-    let screenName, name: String
+    @objc dynamic var screenName: String
+    @objc dynamic var name: String
     let isClosed: Int
 
     enum CodingKeys: String, CodingKey {

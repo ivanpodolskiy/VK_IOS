@@ -1,24 +1,25 @@
 //
-//  GroupJSON.swift
+//  SeachGroupJSON.swift
 //  LessonOne
 //
 //  Created by user on 25.10.2021.
 //
 
 import Foundation
-import RealmSwift
 
 
-// MARK: - Item
-class GroupsBD: Object, Codable {
-    @objc dynamic let isMember, id: Int
-    @objc dynamic let photo100: String
-    @objc dynamic let isAdvertiser, isAdmin: Int
-    @objc dynamic let photo50, photo200: String
-    
+
+
+// MARK: - SearchGropsJSON
+struct SearchGropsJSON: Codable {
+    let isMember, id: Int
+    let photo100: String
+    let isAdvertiser, isAdmin: Int
+    let photo50, photo200: String
+
     let screenName, name: String
     let isClosed: Int
-    
+
     enum CodingKeys: String, CodingKey {
         case isMember = "is_member"
         case id
@@ -27,7 +28,7 @@ class GroupsBD: Object, Codable {
         case isAdmin = "is_admin"
         case photo50 = "photo_50"
         case photo200 = "photo_200"
-        
+
         case screenName = "screen_name"
         case name
         case isClosed = "is_closed"
