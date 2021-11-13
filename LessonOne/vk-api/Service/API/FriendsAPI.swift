@@ -17,7 +17,7 @@ final class FriendsAPI {
     let userID = Session.shared.userId
     let version = "5.81"
     
-    func getFriends(completion: @escaping([FriendsBD]) -> ()) {
+    func getFriends(completion: @escaping([FriendsModel]) -> ()) {
         
         let method = "/friends.get"
         
@@ -38,7 +38,7 @@ final class FriendsAPI {
             do {
                 let friendJSON = try JSON(data)["response"]["items"].rawData()
                 
-                let friends = try JSONDecoder().decode([FriendsBD].self, from: friendJSON)
+                let friends = try JSONDecoder().decode([FriendsModel].self, from: friendJSON)
                 completion(friends)
                 
             } catch {

@@ -46,6 +46,7 @@ final class PhotoAPI{
             } catch {
                 print (error)
             }
+            
         }
     }
 }

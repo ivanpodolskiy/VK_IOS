@@ -1,5 +1,5 @@
 //
-//  FriendsJSON.swift
+//  FriendsModel.swift
 //  LessonOne
 //
 //  Created by user on 25.10.2021.
@@ -10,11 +10,11 @@ import Foundation
 import RealmSwift
 
 
-class FriendsBD: Object, Codable {
-    @objc dynamic let id: Int
-    @objc dynamic let lastName: String
-    @objc dynamic let photo50: String
-    @objc dynamic let firstName: String
+class FriendsModel: Object, Codable {
+    @objc dynamic var id: Int = 0
+    @objc dynamic var lastName: String = ""
+    @objc dynamic var photo50: String = ""
+    @objc dynamic var firstName: String = ""
     
     var fullName: String {
         
