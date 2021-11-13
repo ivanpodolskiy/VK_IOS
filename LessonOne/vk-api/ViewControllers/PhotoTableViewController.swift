@@ -22,9 +22,10 @@ class PhotoTableViewController: UITableViewController {
 //        photoDB.delete()
         super.viewDidLoad()
         getPhotoService.getPhoto { photo in
-            self.photoModel = photo
-//            self.photoDB.save(photo)
-//            self.photoModel = self.photoDB.load()
+//            self.photoModel = photo
+            self.photoDB.delete()
+            self.photoDB.save(photo)
+            self.photoModel = self.photoDB.load()
 //            self.photoModel = photo
             self.tableView.reloadData()
             print ("получили фото в контроллере")
@@ -44,7 +45,7 @@ class PhotoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let itemFriends = self.photoModel[indexPath.row]
-        let sizee = itemFriends.sizes[0]
+        let sizee = itemFriends.sizes[9]
 
         let url = URL(string: sizee.url)
         if let data = try? Data(contentsOf: url!) {

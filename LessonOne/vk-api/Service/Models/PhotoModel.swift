@@ -9,17 +9,31 @@ import Foundation
 import RealmSwift
 
 // MARK: - PhotoModel
-struct PhotoModel:  Codable {
 
-    var albumID: Int
-    var  postID, id, date: Int
-    let text: String
-    let realOffset: Int
+//class test: Object {
+//    @objc dynamic var test: String = ""
+//    var test2 = LinkingObjects(formType: Size, property: "url")
+//
+//}
+//class Test: Object {
+//    @objc dynamic var testIma: String = ""
+//    let owners = LinkingObjects(fromType: Test.self, property: "sizes")
+//}
 
-    var sizes: [Size]
-    let hasTags: Bool
 
-    let ownerID: Int
+class PhotoModel: Object, Codable {
+
+    var albumID: Int = 0
+    var  postID = 0
+    var id = 0
+    var date: Int = 0
+    var text: String = ""
+    var realOffset: Int = 0
+
+    var sizes = List<Size>()
+    var hasTags: Bool = true
+    
+    var ownerID: Int = 0
 
     enum CodingKeys: String, CodingKey {
         case albumID = "album_id"
@@ -30,17 +44,23 @@ struct PhotoModel:  Codable {
         case hasTags = "has_tags"
         case ownerID = "owner_id"
 
+        
+        
     }
+
 }
 
 
 
 
 // MARK: - Size
-struct Size:   Codable {
-    let width, height: Int
-    var  url: String
-    let type: String
+class Size:  Object, Codable {
+    var width = 0, height: Int = 0
+    @objc dynamic var  url: String = ""
+    var type: String = ""
+    
+  
+//    let walkers = LinkingObjects(fromType: Size.self, property:"sizes")
 }
 //
 //class PhotoModel: Object, Codable {
