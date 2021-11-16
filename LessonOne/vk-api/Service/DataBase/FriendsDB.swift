@@ -34,11 +34,11 @@ class FriendsDB {
         
     }
     
-    func load() -> [FriendsModel] {
+    func load() -> Results<FriendsModel>{
         let realm = try! Realm(configuration: migration)
             let someModelResults: Results<FriendsModel> = realm.objects(FriendsModel.self)
-            let someModelArray: [FriendsModel] = someModelResults.toArray()
-            return someModelArray
+//            let someModelArray: [FriendsModel] = someModelResults.toArray()
+            return someModelResults
      
        
 //        let friends: Results<FriendsModel> = realm.objects(FriendsModel.self)

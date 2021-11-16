@@ -25,7 +25,7 @@ final class GroupsAPI {
         let parametrs: Parameters = [
             "access_token": token,
             "user_id": userId,
-            "count": 40,
+            "count": 1000,
             "v": version,
             //            "fields": "city",
             "extended": 1

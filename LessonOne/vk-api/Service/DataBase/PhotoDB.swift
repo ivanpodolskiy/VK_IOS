@@ -27,13 +27,13 @@ class PhotoDB {
         }
     }
 
-    func load() -> [PhotoModel] {
+    func load() -> Results<PhotoModel> {
 
 
         let realm = try! Realm(configuration: migration)
             let someModelResults: Results<PhotoModel> = realm.objects(PhotoModel.self)
-            let someModelArray: [PhotoModel] = someModelResults.toArray()
-            return someModelArray
+//            let someModelArray: [PhotoModel] = someModelResults.toArray()
+            return someModelResults
 
 
 //        let friends: Results<FriendsModel> = realm.objects(FriendsModel.self)
