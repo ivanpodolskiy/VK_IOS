@@ -7,7 +7,14 @@
 
 import UIKit
 import WebKit
+import Firebase
+
 class AuthViewController: UIViewController, WKNavigationDelegate {
+    
+    private let authService = Auth.auth()
+    
+     private var token: AuthStateDidChangeListenerHandle!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +55,13 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
         webView.load(request)
     }
     
+    private func showAlert(titile: String, text: String) {
+        
+        let alert = UIAlertController(title: titile, message: text, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .cancel)
+        alert.addAction(ok)
+        self.present(alert, animated: true, completion: nil)
+    }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         guard  let url = navigationResponse.response.url, url.path == "/blank.html", let fragment = url.fragment else {
@@ -69,6 +83,9 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
         guard let token = params["access_token"], let userId = params["user_id"] else {return}
         print (token as Any)
         
+        
+        
+       
         Session.shared.token = token
         Session.shared.userId = Int(userId) ?? 0
         performSegue(withIdentifier: "showTabBarSegue", sender: nil)

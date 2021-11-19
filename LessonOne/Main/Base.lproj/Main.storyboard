@@ -589,6 +589,92 @@
             </objects>
             <point key="canvasLocation" x="7165" y="2131"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="gx4-h4-LfX">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="eKH-ST-Gwh" customClass="LoginViewController" customModule="LessonOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yQy-gr-oz0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8D1-ht-wGd">
+                                <rect key="frame" x="100" y="153" width="214" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y9c-Oe-Swa">
+                                <rect key="frame" x="100" y="250" width="214" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLy-ks-zcu">
+                                <rect key="frame" x="138" y="382" width="132" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sing in"/>
+                                <connections>
+                                    <action selector="singInActionButton:" destination="eKH-ST-Gwh" eventType="touchUpInside" id="vuG-69-3ZF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ysw-Tk-zJN">
+                                <rect key="frame" x="152" y="433" width="104" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign UP"/>
+                                <connections>
+                                    <action selector="singUpActionButton:" destination="eKH-ST-Gwh" eventType="touchUpInside" id="C9N-hw-K8M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uxE-Dh-oCB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="8D1-ht-wGd" id="L6o-di-va7"/>
+                        <outlet property="passwordTextField" destination="y9c-Oe-Swa" id="cqq-LV-j2s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZEn-VC-Yj0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8799" y="966"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="IIW-8P-wC5">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="ElV-aH-96j" customClass="HomeViewController" customModule="LessonOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VtX-LO-eM0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKA-A2-dQg">
+                                <rect key="frame" x="149" y="433" width="116" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add City"/>
+                                <connections>
+                                    <action selector="addCityActionButton:" destination="ElV-aH-96j" eventType="touchUpInside" id="Lv1-5P-FSJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xec-yx-Hc7">
+                                <rect key="frame" x="152" y="369" width="110" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sing out"/>
+                                <connections>
+                                    <action selector="singOutActionButton:" destination="ElV-aH-96j" eventType="touchUpInside" id="I29-kn-iP1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="B9f-m0-ASu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HxS-zk-pfi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9721.7391304347839" y="965.625"/>
+        </scene>
         <!--Groups Table View Controller-->
         <scene sceneID="dMA-Rh-f1a">
             <objects>
@@ -693,11 +779,11 @@
     </scenes>
     <color key="tintColor" systemColor="systemPinkColor"/>
     <resources>
-        <image name="heart" catalog="system" width="32" height="32"/>
-        <image name="newspaper" catalog="system" width="32" height="32"/>
-        <image name="person.2.fill" catalog="system" width="32" height="32"/>
-        <image name="person.3.fill" catalog="system" width="32" height="32"/>
-        <image name="plus" catalog="system" width="32" height="32"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="newspaper" catalog="system" width="128" height="111"/>
+        <image name="person.2.fill" catalog="system" width="128" height="80"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
