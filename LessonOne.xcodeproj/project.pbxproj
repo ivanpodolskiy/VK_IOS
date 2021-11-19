@@ -45,11 +45,18 @@
 		CEB215D526F4257300BE4754 /* FirendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB215D326F4257300BE4754 /* FirendsTableViewCell.swift */; };
 		CEB215D626F4257300BE4754 /* FirendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB215D426F4257300BE4754 /* FirendsTableViewCell.xib */; };
 		CEB215D826F42C9100BE4754 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC717CD26E3928D00CD9EAD /* Main.storyboard */; };
+		CEC4835B27467F2400A2E153 /* GroupsFirebse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC4835A27467F2400A2E153 /* GroupsFirebse.swift */; };
 		CEC717C826E3928C00CD9EAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC717C726E3928C00CD9EAD /* AppDelegate.swift */; };
 		CEC717CA26E3928C00CD9EAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC717C926E3928C00CD9EAD /* SceneDelegate.swift */; };
 		CEC717CC26E3928C00CD9EAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC717CB26E3928C00CD9EAD /* ViewController.swift */; };
 		CEC717D726E3929000CD9EAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC717D526E3929000CD9EAD /* LaunchScreen.storyboard */; };
+		CED0AE6C2745098700D6E308 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CED0AE6B2745098600D6E308 /* GoogleService-Info.plist */; };
+		CED0AE7027450CAE00D6E308 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CED0AE6F27450CAE00D6E308 /* FirebaseAuth */; };
+		CED0AE7227450CAE00D6E308 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = CED0AE7127450CAE00D6E308 /* FirebaseDatabase */; };
+		CED0AE752745190F00D6E308 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0AE742745190F00D6E308 /* LoginViewController.swift */; };
+		CED0AE772745192D00D6E308 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0AE762745192D00D6E308 /* HomeViewController.swift */; };
 		CED376CF26F4FB63004B0979 /* ProfileFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED376CE26F4FB63004B0979 /* ProfileFriendsViewController.swift */; };
+		CEE4BE7D274540E90048128F /* CityFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4BE7C274540E90048128F /* CityFirebase.swift */; };
 		CEFE3E1326FF461A006F3CF0 /* ViewFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE3E1226FF461A006F3CF0 /* ViewFriends.swift */; };
 		CEFE3E1526FF4B99006F3CF0 /* imageFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE3E1426FF4B99006F3CF0 /* imageFriends.swift */; };
 /* End PBXBuildFile section */
@@ -87,6 +94,7 @@
 		CEB215D126F4252500BE4754 /* R.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.swift; sourceTree = "<group>"; };
 		CEB215D326F4257300BE4754 /* FirendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirendsTableViewCell.swift; sourceTree = "<group>"; };
 		CEB215D426F4257300BE4754 /* FirendsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirendsTableViewCell.xib; sourceTree = "<group>"; };
+		CEC4835A27467F2400A2E153 /* GroupsFirebse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsFirebse.swift; sourceTree = "<group>"; };
 		CEC717C426E3928C00CD9EAD /* LessonOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LessonOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC717C726E3928C00CD9EAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEC717C926E3928C00CD9EAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,7 +102,11 @@
 		CEC717CE26E3928D00CD9EAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEC717D626E3929000CD9EAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEC717D826E3929000CD9EAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CED0AE6B2745098600D6E308 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CED0AE742745190F00D6E308 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CED0AE762745192D00D6E308 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CED376CE26F4FB63004B0979 /* ProfileFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFriendsViewController.swift; sourceTree = "<group>"; };
+		CEE4BE7C274540E90048128F /* CityFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityFirebase.swift; sourceTree = "<group>"; };
 		CEFE3E1226FF461A006F3CF0 /* ViewFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFriends.swift; sourceTree = "<group>"; };
 		CEFE3E1426FF4B99006F3CF0 /* imageFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageFriends.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,9 +117,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE42C15227261DF400103E04 /* SwiftyJSON in Frameworks */,
+				CED0AE7027450CAE00D6E308 /* FirebaseAuth in Frameworks */,
 				CE42C112272427F800103E04 /* Alamofire in Frameworks */,
 				CE367AA8272F26DE00C466A9 /* Realm in Frameworks */,
 				CE367AAA272F26DE00C466A9 /* RealmSwift in Frameworks */,
+				CED0AE7227450CAE00D6E308 /* FirebaseDatabase in Frameworks */,
 				CE367AA5272F209000C466A9 /* SwiftKeychainWrapper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,9 +160,10 @@
 		CE42C10C2723177000103E04 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CEC4835A27467F2400A2E153 /* GroupsFirebse.swift */,
+				CE42C11F272438FB00103E04 /* GroupsTableViewController.swift */,
 				CE42C1192724295900103E04 /* AuthViewController.swift */,
 				CE42C1212724392500103E04 /* FriendsTableViewController.swift */,
-				CE42C11F272438FB00103E04 /* GroupsTableViewController.swift */,
 				CE42C11B2724389900103E04 /* PhotoTableViewController.swift */,
 				CE42C11D272438DA00103E04 /* SearchGroupsTableViewController.swift */,
 			);
@@ -254,6 +269,7 @@
 		CEC717C626E3928C00CD9EAD /* LessonOne */ = {
 			isa = PBXGroup;
 			children = (
+				CED0AE73274518EA00D6E308 /* Firebase */,
 				CE42C10D2723178100103E04 /* vk-api */,
 				CE864C682708D63700E9CF26 /* Main */,
 				CEFE3E1A2700AC41006F3CF0 /* Friends */,
@@ -261,13 +277,32 @@
 				CE15FFB526F7E16B00CF18D2 /* MyGroup */,
 				CE864C6D270A2DEA00E9CF26 /* News */,
 				CEB215D126F4252500BE4754 /* R.swift */,
-				CEC717C726E3928C00CD9EAD /* AppDelegate.swift */,
-				CEC717C926E3928C00CD9EAD /* SceneDelegate.swift */,
+				CED0AE6D2745098F00D6E308 /* New Group */,
 				CEC717D526E3929000CD9EAD /* LaunchScreen.storyboard */,
 				CEC717D826E3929000CD9EAD /* Info.plist */,
-				CE88D7BE2713630900A143A3 /* Images.xcassets */,
 			);
 			path = LessonOne;
+			sourceTree = "<group>";
+		};
+		CED0AE6D2745098F00D6E308 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				CE88D7BE2713630900A143A3 /* Images.xcassets */,
+				CEC717C726E3928C00CD9EAD /* AppDelegate.swift */,
+				CEC717C926E3928C00CD9EAD /* SceneDelegate.swift */,
+				CED0AE6B2745098600D6E308 /* GoogleService-Info.plist */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		CED0AE73274518EA00D6E308 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				CED0AE742745190F00D6E308 /* LoginViewController.swift */,
+				CEE4BE7C274540E90048128F /* CityFirebase.swift */,
+				CED0AE762745192D00D6E308 /* HomeViewController.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		CEFE3E1A2700AC41006F3CF0 /* Friends */ = {
@@ -329,6 +364,8 @@
 				CE367AA4272F209000C466A9 /* SwiftKeychainWrapper */,
 				CE367AA7272F26DE00C466A9 /* Realm */,
 				CE367AA9272F26DE00C466A9 /* RealmSwift */,
+				CED0AE6F27450CAE00D6E308 /* FirebaseAuth */,
+				CED0AE7127450CAE00D6E308 /* FirebaseDatabase */,
 			);
 			productName = LessonOne;
 			productReference = CEC717C426E3928C00CD9EAD /* LessonOne.app */;
@@ -362,6 +399,7 @@
 				CE42C15027261DF400103E04 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				CE367AA3272F209000C466A9 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
 				CE367AA6272F26DE00C466A9 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				CED0AE6E27450CAE00D6E308 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = CEC717C526E3928C00CD9EAD /* Products */;
 			projectDirPath = "";
@@ -382,6 +420,7 @@
 				CEB215D626F4257300BE4754 /* FirendsTableViewCell.xib in Resources */,
 				CEB215D826F42C9100BE4754 /* Main.storyboard in Resources */,
 				CE864C71270A2F8700E9CF26 /* NewsTableViewCell.xib in Resources */,
+				CED0AE6C2745098700D6E308 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,9 +431,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED0AE752745190F00D6E308 /* LoginViewController.swift in Sources */,
 				CE42C116272428CA00103E04 /* SearchGropsAPI.swift in Sources */,
 				CE42C1142724283300103E04 /* GroupsAPI.swift in Sources */,
+				CED0AE772745192D00D6E308 /* HomeViewController.swift in Sources */,
 				CE33E281271C4E640031B1F7 /* new.swift in Sources */,
+				CEC4835B27467F2400A2E153 /* GroupsFirebse.swift in Sources */,
 				CE864C6C270A2DB300E9CF26 /* NewsPageViewController.swift in Sources */,
 				CE42C11A2724295900103E04 /* AuthViewController.swift in Sources */,
 				CE4B9A66273963F800918D10 /* GroupsDB.swift in Sources */,
@@ -403,6 +445,7 @@
 				CE15FFB226F7E15000CF18D2 /* MyGroupViewController.swift in Sources */,
 				CE42C14A27261CBB00103E04 /* SeachGroupJSON.swift in Sources */,
 				CE4B9A6327394AB900918D10 /* FriendsDB.swift in Sources */,
+				CEE4BE7D274540E90048128F /* CityFirebase.swift in Sources */,
 				CE42C14F27261DBA00103E04 /* Data+PrattyJSON.swift in Sources */,
 				CE15FFA926F77FB300CF18D2 /* AllGroupCell.swift in Sources */,
 				CEB215D026F4246D00BE4754 /* FriendsViewController.swift in Sources */,
@@ -662,6 +705,14 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		CED0AE6E27450CAE00D6E308 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -689,6 +740,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CE42C15027261DF400103E04 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		CED0AE6F27450CAE00D6E308 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CED0AE6E27450CAE00D6E308 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		CED0AE7127450CAE00D6E308 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CED0AE6E27450CAE00D6E308 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
