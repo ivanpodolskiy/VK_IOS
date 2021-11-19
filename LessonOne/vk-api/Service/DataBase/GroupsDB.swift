@@ -25,11 +25,11 @@ class GropsDB {
         }
     }
     
-    func load() -> [GroupsModel] {
+    func load() -> Results<GroupsModel>{
         let realm = try! Realm(configuration: migration)
             let someModelResults: Results<GroupsModel> = realm.objects(GroupsModel.self)
-            let someModelArray: [GroupsModel] = someModelResults.toArray()
-            return someModelArray
+//            let someModelArray: [GroupsModel] = someModelResults.toArray()
+            return someModelResults
      
        
 //        let friends: Results<FriendsModel> = realm.objects(FriendsModel.self)

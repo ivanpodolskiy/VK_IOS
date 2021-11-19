@@ -25,7 +25,7 @@ final class FriendsAPI {
             "user_id": userID,
             "order": "name",
             "fields": "photo_50",
-            "count": 50,
+            "count": 1000,
             "access_token": token,
             "v": version
         ]
