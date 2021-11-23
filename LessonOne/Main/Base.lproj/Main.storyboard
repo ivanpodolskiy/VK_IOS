@@ -443,7 +443,7 @@
         <!--Новости-->
         <scene sceneID="rMq-TU-PTd">
             <objects>
-                <viewController id="mWy-4W-wdW" customClass="NewsPageViewController" customModule="LessonOne" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mWy-4W-wdW" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kQK-WX-4jj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -473,7 +473,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sO0-Qx-keG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2302.898550724638" y="1404.9107142857142"/>
+            <point key="canvasLocation" x="2367" y="1981"/>
         </scene>
         <!--Auth View Controller-->
         <scene sceneID="X7q-uc-YtB">
@@ -587,7 +587,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BfN-3y-rek" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7165" y="2131"/>
+            <point key="canvasLocation" x="7180" y="2151"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="gx4-h4-LfX">
@@ -753,6 +753,7 @@
                         <segue destination="hwV-Jd-NhO" kind="relationship" relationship="viewControllers" id="23o-YR-AWU"/>
                         <segue destination="6xH-Yk-246" kind="relationship" relationship="viewControllers" id="9Pi-qm-v90"/>
                         <segue destination="xac-Eh-kX0" kind="relationship" relationship="viewControllers" id="EEQ-ZX-21D"/>
+                        <segue destination="rgj-2s-cBy" kind="relationship" relationship="viewControllers" id="oIr-jD-T8N"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="upj-jU-a0A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -775,6 +776,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LMH-Mg-Y16" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6265" y="2131"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="VQB-kh-cV5">
+            <objects>
+                <tableViewController id="rgj-2s-cBy" customClass="NewsFeedTableViewController" customModule="LessonOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9th-Oo-hJm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="106" id="FHr-V7-C9E" customClass="NewFeedVKTableViewCell" customModule="LessonOne" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="106"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FHr-V7-C9E" id="zUT-Zc-cIN">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rgj-2s-cBy" id="Rno-sq-d2I"/>
+                            <outlet property="delegate" destination="rgj-2s-cBy" id="YAo-T0-weq"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="6pZ-A8-uW7"/>
+                    <navigationItem key="navigationItem" id="Yc5-p0-eq1">
+                        <barButtonItem key="rightBarButtonItem" title="Группы" id="UOt-x2-bQw"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bLR-2i-ueG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8028.985507246377" y="2150.2232142857142"/>
         </scene>
     </scenes>
     <color key="tintColor" systemColor="systemPinkColor"/>

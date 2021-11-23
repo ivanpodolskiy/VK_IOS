@@ -30,7 +30,7 @@ class PhotoModel: Object, Codable {
     var text: String = ""
     var realOffset: Int = 0
 
-    var sizes = List<Size>()
+    var sizes = List<SizePhoto>()
     var hasTags: Bool = true
     
     var ownerID: Int = 0
@@ -54,7 +54,7 @@ class PhotoModel: Object, Codable {
 
 
 // MARK: - Size
-class Size:  Object, Codable {
+class SizePhoto:  Object, Codable {
     var width = 0, height: Int = 0
     @objc dynamic var  url: String = ""
     var type: String = ""
