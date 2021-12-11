@@ -25,12 +25,12 @@ class PhotoTableViewController: UITableViewController {
 //
         
         getPhotoService.getPhoto { [weak self] photo in
-            guard let self = self else {return}
-            self.photoDB.save(photo)
-            self.photoModel = self.photoDB.load()
+//            guard let self = self else {return}
+            self?.photoDB.save(photo)
+            self?.photoModel = self!.photoDB.load()
 
             
-            self.token = self.photoModel?.observe { [weak self] changes in
+            self?.token = self!.photoModel?.observe { [weak self] changes in
                 guard let self = self else { return}
                 
                 switch changes {

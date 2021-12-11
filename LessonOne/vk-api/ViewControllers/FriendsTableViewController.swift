@@ -8,18 +8,26 @@
 import UIKit
 import RealmSwift
 
+
 class FriendsTableViewController: UITableViewController {
     
     let friendsService = FriendsAPI()
     var friendsModel: Results<FriendsModel>?
 
-    
+
     var token: NotificationToken?
     var friendsDB = FriendsDB()
+
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        var test = Array(1...10)
+        test[0] = 3
+        print (test)
+        
+      
+
        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")      
         friendsService.getFriends { [weak self] friends in
@@ -62,9 +70,7 @@ class FriendsTableViewController: UITableViewController {
     }
     
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
+    
     // MARK: - Table view data source
     
     

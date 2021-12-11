@@ -95,7 +95,7 @@ class GroupsTableViewController: UITableViewController {
         
             //Сохранение в Fairebase
         let group = GroupsFirebse(name: itemGrup.name)
-        print (group.name)
+//        print (group.name)
         let cityContainerRef = self.ref.child(group.name).childByAutoId()
         cityContainerRef.setValue(group.toAnyObject())
 //

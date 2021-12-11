@@ -443,7 +443,7 @@
         <!--Новости-->
         <scene sceneID="rMq-TU-PTd">
             <objects>
-                <viewController id="mWy-4W-wdW" sceneMemberID="viewController">
+                <viewController id="mWy-4W-wdW" customClass="NewsPageViewController" customModule="LessonOne" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kQK-WX-4jj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -627,6 +627,15 @@
                                     <action selector="singUpActionButton:" destination="eKH-ST-Gwh" eventType="touchUpInside" id="C9N-hw-K8M"/>
                                 </connections>
                             </button>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SDF-db-EnR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="yOS-vY-ux0"/>
+                                    <tabBarItem systemItem="more" id="MyS-Tx-gHL"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uxE-Dh-oCB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -786,11 +795,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="106" id="FHr-V7-C9E" customClass="NewFeedVKTableViewCell" customModule="LessonOne" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="106"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="390" id="FHr-V7-C9E" customClass="PhotoNewsTableViewCell" customModule="LessonOne" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="390"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FHr-V7-C9E" id="zUT-Zc-cIN">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="390"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
