@@ -75,17 +75,21 @@ class NewsFeedTableViewController: UITableViewController {
         
         //имя и фото для AuthorSection
         let source = items[indexPath.section].sourceID
+        
+        
         var name, string: String?
         
         if source < 0  {
             groups.forEach {
                 if $0.id == abs(source) {
+                    print($0.id)
                     name = $0.name
                     string = $0.photo100
                     
                 } else {
                     profiles.forEach {
                         if $0.id == source {
+                            print($0.id)
                             name = $0.firstName + " " + $0.lastName
                             string = $0.photo100
                         }

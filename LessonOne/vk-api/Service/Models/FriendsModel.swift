@@ -5,10 +5,20 @@
 //  Created by user on 25.10.2021.
 //
 
-
+//Это для realm
 import Foundation
 import RealmSwift
 
+//test
+struct FriendsJSON: Codable {
+    let response: FriendsResponse
+}
+
+//test
+struct FriendsResponse: Codable {
+    let count: Int
+    let items: [FriendsModel]
+}
 
 class FriendsModel: Object, Codable {
     @objc dynamic var id: Int = 0
