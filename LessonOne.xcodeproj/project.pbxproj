@@ -45,6 +45,8 @@
 		CE729AE6275265FC003E9C8A /* PhotoNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE729AE4275265FB003E9C8A /* PhotoNewsTableViewCell.xib */; };
 		CE82C1C42768E88D005CB3FF /* FriendsOperationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82C1C32768E88D005CB3FF /* FriendsOperationTableViewController.swift */; };
 		CE82C1C6276918DC005CB3FF /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82C1C5276918DC005CB3FF /* AsyncOperation.swift */; };
+		CE82C1F2277257E0005CB3FF /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE82C1F1277257E0005CB3FF /* PromiseKit */; };
+		CE82C1F427725D43005CB3FF /* PromiseGroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82C1F327725D43005CB3FF /* PromiseGroupsTableViewController.swift */; };
 		CE864C6A2708D70800E9CF26 /* TabBarContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE864C692708D70800E9CF26 /* TabBarContorller.swift */; };
 		CE864C6C270A2DB300E9CF26 /* NewsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE864C6B270A2DB300E9CF26 /* NewsPageViewController.swift */; };
 		CE864C70270A2F8700E9CF26 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE864C6E270A2F8700E9CF26 /* NewsTableViewCell.swift */; };
@@ -108,6 +110,7 @@
 		CE729AE4275265FB003E9C8A /* PhotoNewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoNewsTableViewCell.xib; sourceTree = "<group>"; };
 		CE82C1C32768E88D005CB3FF /* FriendsOperationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsOperationTableViewController.swift; sourceTree = "<group>"; };
 		CE82C1C5276918DC005CB3FF /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		CE82C1F327725D43005CB3FF /* PromiseGroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseGroupsTableViewController.swift; sourceTree = "<group>"; };
 		CE864C692708D70800E9CF26 /* TabBarContorller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContorller.swift; sourceTree = "<group>"; };
 		CE864C6B270A2DB300E9CF26 /* NewsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPageViewController.swift; sourceTree = "<group>"; };
 		CE864C6E270A2F8700E9CF26 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE42C15227261DF400103E04 /* SwiftyJSON in Frameworks */,
+				CE82C1F2277257E0005CB3FF /* PromiseKit in Frameworks */,
 				CED0AE7027450CAE00D6E308 /* FirebaseAuth in Frameworks */,
 				CE42C112272427F800103E04 /* Alamofire in Frameworks */,
 				CE367AA8272F26DE00C466A9 /* Realm in Frameworks */,
@@ -186,11 +190,11 @@
 		CE42C10C2723177000103E04 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE82C1F527726A3A005CB3FF /* Group */,
 				CE729ACD274C3290003E9C8A /* NewFeed */,
 				CE42C11B2724389900103E04 /* PhotoTableViewController.swift */,
 				CE42C1212724392500103E04 /* FriendsTableViewController.swift */,
 				CE82C1C32768E88D005CB3FF /* FriendsOperationTableViewController.swift */,
-				CE42C11F272438FB00103E04 /* GroupsTableViewController.swift */,
 				CE42C1192724295900103E04 /* AuthViewController.swift */,
 				CE42C11D272438DA00103E04 /* SearchGroupsTableViewController.swift */,
 			);
@@ -306,6 +310,15 @@
 				CE729AE4275265FB003E9C8A /* PhotoNewsTableViewCell.xib */,
 			);
 			path = Photo;
+			sourceTree = "<group>";
+		};
+		CE82C1F527726A3A005CB3FF /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				CE42C11F272438FB00103E04 /* GroupsTableViewController.swift */,
+				CE82C1F327725D43005CB3FF /* PromiseGroupsTableViewController.swift */,
+			);
+			path = Group;
 			sourceTree = "<group>";
 		};
 		CE864C682708D63700E9CF26 /* Main */ = {
@@ -453,6 +466,7 @@
 				CE367AA9272F26DE00C466A9 /* RealmSwift */,
 				CED0AE6F27450CAE00D6E308 /* FirebaseAuth */,
 				CED0AE7127450CAE00D6E308 /* FirebaseDatabase */,
+				CE82C1F1277257E0005CB3FF /* PromiseKit */,
 			);
 			productName = LessonOne;
 			productReference = CEC717C426E3928C00CD9EAD /* LessonOne.app */;
@@ -487,6 +501,7 @@
 				CE367AA3272F209000C466A9 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
 				CE367AA6272F26DE00C466A9 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				CED0AE6E27450CAE00D6E308 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CE82C1F0277257E0005CB3FF /* XCRemoteSwiftPackageReference "PromiseKit" */,
 			);
 			productRefGroup = CEC717C526E3928C00CD9EAD /* Products */;
 			projectDirPath = "";
@@ -522,6 +537,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE82C1F427725D43005CB3FF /* PromiseGroupsTableViewController.swift in Sources */,
 				CE82C1C6276918DC005CB3FF /* AsyncOperation.swift in Sources */,
 				CEFEC4DC274825F3007F1965 /* NewFeedModel.swift in Sources */,
 				CED0AE752745190F00D6E308 /* LoginViewController.swift in Sources */,
@@ -805,6 +821,14 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		CE82C1F0277257E0005CB3FF /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.16.2;
+			};
+		};
 		CED0AE6E27450CAE00D6E308 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -840,6 +864,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CE42C15027261DF400103E04 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		CE82C1F1277257E0005CB3FF /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE82C1F0277257E0005CB3FF /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
 		};
 		CED0AE6F27450CAE00D6E308 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
