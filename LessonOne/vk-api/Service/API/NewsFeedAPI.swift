@@ -19,6 +19,7 @@ final class NewsFeedAPI{
     
     func getNewsfeed(completion: @escaping(NewJSON) -> ()) {
         
+        
         let method = "/newsfeed.get"
         
         let parameters: Parameters = [

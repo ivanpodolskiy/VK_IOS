@@ -20,6 +20,7 @@ final class FriendsMakeAPIOperation: AsyncOperation {
     }
     
     var request: DataRequest {
+       
         let baseURL = "https://api.vk.com/method"
         let token = Session.shared.token
         let userID = Session.shared.userId

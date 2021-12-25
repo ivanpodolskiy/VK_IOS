@@ -27,8 +27,12 @@ final class GroupsAPI {
     let userId = Session.shared.userId
     let version = "5.81"
     
+
     func promiseGetGroup() -> Promise<[GroupsModel]> {
+        
         return Promise<[GroupsModel]> { resolver in
+            
+            
             let method = "/groups.get"
             let parametrs: Parameters = [
                 "user-id": userId,
@@ -63,6 +67,8 @@ final class GroupsAPI {
 
     //OLD
     func getGroups(completion: @escaping([GroupsModel]) -> ()) {
+        
+        
         let method = "/groups.get"
         let parametrs: Parameters = [
             "user-id": userId,
