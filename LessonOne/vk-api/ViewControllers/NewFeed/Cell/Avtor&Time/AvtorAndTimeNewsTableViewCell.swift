@@ -15,43 +15,37 @@ class AuthorAndTimeNewsTableViewCell: UITableViewCell {
     
     
     
-    func config(name: String, image: String, datePublication: Int) {
+    func config(name: String, imageURL: String, datePublication: Int) {
         
+        self.nameLable.text = name
         
-        
-        
-        DispatchQueue.global(priority: .background).async {
-            
-            let dateInt = Double(datePublication)
-            let date = Date(timeIntervalSince1970: dateInt)
-            let dateformatter = DateFormatter()
-            dateformatter.dateStyle = .medium
-            print("Publication date is \(date)")
-            
-            let url = URL(string: image)
-            let data = try? Data(contentsOf: url!)
-            
-            DispatchQueue.main.async {
-                
-                self.avatarView?.image = UIImage(data: data!)
-                self.nameLable.text = name
-                self.LastSeenLabel.text = dateformatter.string(from: date)
-            }
-            
+        //Фото профиля
+        if let url = URL(string: imageURL) {
+            let data = try? Data(contentsOf: url)
+            self.avatarView.image = UIImage(data: data!)
         }
         
+       
+            //Дата
+        let dateformatter = DateFormatter()
+        let dateInt = Double(datePublication)
+        
+        let date = Date(timeIntervalSince1970: dateInt)
+        dateformatter.dateStyle = .medium
+        self.LastSeenLabel.text = dateformatter.string(from: date)
+        print("Publication date is \(date)")
         
     }
     
     override func layoutSubviews() {
-        DispatchQueue.main.async {
-            self.avatarView.layer.borderWidth = 0.1
+    
+            self.avatarView.layer.borderWidth = 0
             self.avatarView.layer.masksToBounds = true
             self.avatarView.layer.borderColor = UIColor.black.cgColor
             self.avatarView.layer.cornerRadius = 50/2
             self.avatarView.clipsToBounds = true
         
-        }
+
            
         
         

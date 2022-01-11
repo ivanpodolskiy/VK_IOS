@@ -557,7 +557,7 @@
             </objects>
             <point key="canvasLocation" x="4551" y="2853"/>
         </scene>
-        <!--Photos-->
+        <!--Мои фотографии-->
         <scene sceneID="Azs-wz-oUA">
             <objects>
                 <tableViewController id="xac-Eh-kX0" customClass="PhotoTableViewController" customModule="LessonOne" customModuleProvider="target" sceneMemberID="viewController">
@@ -580,7 +580,7 @@
                             <outlet property="delegate" destination="xac-Eh-kX0" id="CXI-be-YoI"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Photos" id="ntB-2F-wmN"/>
+                    <tabBarItem key="tabBarItem" title="Мои фотографии" image="photo" catalog="system" id="ntB-2F-wmN"/>
                     <navigationItem key="navigationItem" id="ZU9-UV-YxG">
                         <barButtonItem key="rightBarButtonItem" title="Группы" id="RPb-J1-gmK"/>
                     </navigationItem>
@@ -691,7 +691,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NXN-Ji-Ciu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Enc-z4-TNB">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
@@ -762,7 +762,6 @@
                         <segue destination="6xH-Yk-246" kind="relationship" relationship="viewControllers" id="9Pi-qm-v90"/>
                         <segue destination="xac-Eh-kX0" kind="relationship" relationship="viewControllers" id="EEQ-ZX-21D"/>
                         <segue destination="rgj-2s-cBy" kind="relationship" relationship="viewControllers" id="oIr-jD-T8N"/>
-                        <segue destination="RQ8-Le-eu6" kind="relationship" relationship="viewControllers" id="we6-80-td7"/>
                         <segue destination="7Je-Ss-u4E" kind="relationship" relationship="viewControllers" id="Fa5-rs-KxX"/>
                     </connections>
                 </tabBarController>
@@ -770,11 +769,11 @@
             </objects>
             <point key="canvasLocation" x="5536" y="1426"/>
         </scene>
-        <!--Item-->
+        <!--Группы-->
         <scene sceneID="qRW-os-Htp">
             <objects>
                 <navigationController id="6xH-Yk-246" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" badgeValue="Groups" id="xWg-tv-pFw"/>
+                    <tabBarItem key="tabBarItem" title="Группы" image="book" catalog="system" id="xWg-tv-pFw"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JOF-Ic-hua">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -787,7 +786,7 @@
             </objects>
             <point key="canvasLocation" x="6265" y="2131"/>
         </scene>
-        <!--News-->
+        <!--Новости-->
         <scene sceneID="VQB-kh-cV5">
             <objects>
                 <tableViewController id="rgj-2s-cBy" customClass="NewsFeedTableViewController" customModule="LessonOne" customModuleProvider="target" sceneMemberID="viewController">
@@ -796,7 +795,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="390" id="FHr-V7-C9E" customClass="PhotoNewsTableViewCell" customModule="LessonOne" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="390" id="FHr-V7-C9E">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="390"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FHr-V7-C9E" id="zUT-Zc-cIN">
@@ -810,7 +809,7 @@
                             <outlet property="delegate" destination="rgj-2s-cBy" id="YAo-T0-weq"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="News" id="6pZ-A8-uW7"/>
+                    <tabBarItem key="tabBarItem" title="Новости" image="newspaper" catalog="system" id="6pZ-A8-uW7"/>
                     <navigationItem key="navigationItem" id="Yc5-p0-eq1">
                         <barButtonItem key="rightBarButtonItem" title="Группы" id="UOt-x2-bQw"/>
                     </navigationItem>
@@ -819,7 +818,7 @@
             </objects>
             <point key="canvasLocation" x="8014" y="2151"/>
         </scene>
-        <!--Friends-->
+        <!--Друзья-->
         <scene sceneID="6sz-sb-Scb">
             <objects>
                 <tableViewController id="7Je-Ss-u4E" customClass="FriendsOperationTableViewController" customModule="LessonOne" customModuleProvider="target" sceneMemberID="viewController">
@@ -842,52 +841,23 @@
                             <outlet property="delegate" destination="7Je-Ss-u4E" id="e0I-De-XlU"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Friends" id="lZE-L3-22a"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Друзья" image="person" catalog="system" id="lZE-L3-22a"/>
                     <navigationItem key="navigationItem" id="dBn-xx-aKf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LFy-WE-DZs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9822" y="2073"/>
-        </scene>
-        <!--TestNews-->
-        <scene sceneID="WkG-L7-gHV">
-            <objects>
-                <tableViewController id="RQ8-Le-eu6" customClass="TestNewsFeedViewController" customModule="LessonOne" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="f3H-1q-FWg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="390" id="Qa2-x5-WpZ" customClass="PhotoNewsTableViewCell" customModule="LessonOne" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="390"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qa2-x5-WpZ" id="DOD-wi-bNq">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="390"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="RQ8-Le-eu6" id="Y5M-Ib-Xzz"/>
-                            <outlet property="delegate" destination="RQ8-Le-eu6" id="IQg-jo-m4o"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="TestNews" id="sql-4K-nzr"/>
-                    <navigationItem key="navigationItem" id="bQU-Ob-qJ0">
-                        <barButtonItem key="rightBarButtonItem" title="Группы" id="yvL-oW-ijo"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qhp-Wa-Dcc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8849" y="2150"/>
+            <point key="canvasLocation" x="8799" y="2151"/>
         </scene>
     </scenes>
     <color key="tintColor" systemColor="systemPinkColor"/>
     <resources>
+        <image name="book" catalog="system" width="128" height="99"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="newspaper" catalog="system" width="128" height="111"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

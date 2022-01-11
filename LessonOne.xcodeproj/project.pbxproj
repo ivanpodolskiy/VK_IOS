@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0C4DE7278C85B900049215 /* ActiveLabel in Frameworks */ = {isa = PBXBuildFile; productRef = CE0C4DE6278C85B900049215 /* ActiveLabel */; };
+		CE0C4DEC278CB11100049215 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = CE0C4DEB278CB11100049215 /* AlamofireImage */; };
+		CE0C4DEF278CB2C100049215 /* ImageViewer_swift in Frameworks */ = {isa = PBXBuildFile; productRef = CE0C4DEE278CB2C100049215 /* ImageViewer_swift */; };
+		CE0C4DF2278CB9BB00049215 /* ExpandableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C4DF1278CB9BB00049215 /* ExpandableLabel.swift */; };
 		CE15FFA326F741C400CF18D2 /* AllGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15FFA226F741C400CF18D2 /* AllGroupViewController.swift */; };
 		CE15FFA926F77FB300CF18D2 /* AllGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15FFA826F77FB300CF18D2 /* AllGroupCell.swift */; };
 		CE15FFB226F7E15000CF18D2 /* MyGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15FFB126F7E15000CF18D2 /* MyGroupViewController.swift */; };
@@ -77,6 +81,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE0C4DF1278CB9BB00049215 /* ExpandableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableLabel.swift; sourceTree = "<group>"; };
 		CE15FFA226F741C400CF18D2 /* AllGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupViewController.swift; sourceTree = "<group>"; };
 		CE15FFA826F77FB300CF18D2 /* AllGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupCell.swift; sourceTree = "<group>"; };
 		CE15FFB126F7E15000CF18D2 /* MyGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupViewController.swift; sourceTree = "<group>"; };
@@ -148,10 +153,13 @@
 				CE42C15227261DF400103E04 /* SwiftyJSON in Frameworks */,
 				CE82C1F2277257E0005CB3FF /* PromiseKit in Frameworks */,
 				CED0AE7027450CAE00D6E308 /* FirebaseAuth in Frameworks */,
+				CE0C4DEF278CB2C100049215 /* ImageViewer_swift in Frameworks */,
 				CE42C112272427F800103E04 /* Alamofire in Frameworks */,
 				CE367AA8272F26DE00C466A9 /* Realm in Frameworks */,
 				CE367AAA272F26DE00C466A9 /* RealmSwift in Frameworks */,
 				CED0AE7227450CAE00D6E308 /* FirebaseDatabase in Frameworks */,
+				CE0C4DEC278CB11100049215 /* AlamofireImage in Frameworks */,
+				CE0C4DE7278C85B900049215 /* ActiveLabel in Frameworks */,
 				CE367AA5272F209000C466A9 /* SwiftKeychainWrapper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +269,7 @@
 			children = (
 				CE5211802755628200DC3397 /* TextTableViewCell.swift */,
 				CE5211812755628200DC3397 /* TextTableViewCell.xib */,
+				CE0C4DF1278CB9BB00049215 /* ExpandableLabel.swift */,
 			);
 			path = TextPost;
 			sourceTree = "<group>";
@@ -467,6 +476,9 @@
 				CED0AE6F27450CAE00D6E308 /* FirebaseAuth */,
 				CED0AE7127450CAE00D6E308 /* FirebaseDatabase */,
 				CE82C1F1277257E0005CB3FF /* PromiseKit */,
+				CE0C4DE6278C85B900049215 /* ActiveLabel */,
+				CE0C4DEB278CB11100049215 /* AlamofireImage */,
+				CE0C4DEE278CB2C100049215 /* ImageViewer_swift */,
 			);
 			productName = LessonOne;
 			productReference = CEC717C426E3928C00CD9EAD /* LessonOne.app */;
@@ -502,6 +514,9 @@
 				CE367AA6272F26DE00C466A9 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				CED0AE6E27450CAE00D6E308 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				CE82C1F0277257E0005CB3FF /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				CE0C4DE5278C85B800049215 /* XCRemoteSwiftPackageReference "ActiveLabel.swift" */,
+				CE0C4DEA278CB11000049215 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				CE0C4DED278CB2C000049215 /* XCRemoteSwiftPackageReference "ImageViewer.swift" */,
 			);
 			productRefGroup = CEC717C526E3928C00CD9EAD /* Products */;
 			projectDirPath = "";
@@ -538,6 +553,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE82C1F427725D43005CB3FF /* PromiseGroupsTableViewController.swift in Sources */,
+				CE0C4DF2278CB9BB00049215 /* ExpandableLabel.swift in Sources */,
 				CE82C1C6276918DC005CB3FF /* AsyncOperation.swift in Sources */,
 				CEFEC4DC274825F3007F1965 /* NewFeedModel.swift in Sources */,
 				CED0AE752745190F00D6E308 /* LoginViewController.swift in Sources */,
@@ -789,6 +805,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CE0C4DE5278C85B800049215 /* XCRemoteSwiftPackageReference "ActiveLabel.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/optonaut/ActiveLabel.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.5;
+			};
+		};
+		CE0C4DEA278CB11000049215 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.0;
+			};
+		};
+		CE0C4DED278CB2C000049215 /* XCRemoteSwiftPackageReference "ImageViewer.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/michaelhenry/ImageViewer.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.3.3;
+			};
+		};
 		CE367AA3272F209000C466A9 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper.git";
@@ -840,6 +880,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CE0C4DE6278C85B900049215 /* ActiveLabel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0C4DE5278C85B800049215 /* XCRemoteSwiftPackageReference "ActiveLabel.swift" */;
+			productName = ActiveLabel;
+		};
+		CE0C4DEB278CB11100049215 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0C4DEA278CB11000049215 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+		CE0C4DEE278CB2C100049215 /* ImageViewer_swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0C4DED278CB2C000049215 /* XCRemoteSwiftPackageReference "ImageViewer.swift" */;
+			productName = ImageViewer_swift;
+		};
 		CE367AA4272F209000C466A9 /* SwiftKeychainWrapper */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CE367AA3272F209000C466A9 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;

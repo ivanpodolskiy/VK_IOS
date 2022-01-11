@@ -4,18 +4,35 @@
 //
 //  Created by user on 29.11.2021.
 //
-
+import Foundation
 import UIKit
+
+
+
+
+
 
 class TextTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var textPostLabel: UILabel!
+    //: ExpandableLabel!
     
-    func conf(text: String?) {
-//        DispatchQueue.main.sync {
-            self.textPostLabel.text = text
-            self.textPostLabel.lineBreakMode  = .byWordWrapping
-            self.textPostLabel.numberOfLines = 0
-//        }
+    @IBOutlet weak var textPostLabel: ExpandableLabel!
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
     }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+    
+
+    func conf(text: String) {
+        textPostLabel.text = text
+     
+    }
+    
+    
 }
