@@ -8,9 +8,16 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import PromiseKit
+
 
 struct Group {
     
+}
+
+
+enum ApplicationError: Error {
+    case noGroups
 }
 
 final class GroupsAPI {
@@ -20,6 +27,41 @@ final class GroupsAPI {
     let userId = Session.shared.userId
     let version = "5.81"
     
+    func promiseGetGroup() -> Promise<[GroupsModel]> {
+        return Promise<[GroupsModel]> { resolver in
+            let method = "/groups.get"
+            let parametrs: Parameters = [
+                "user-id": userId,
+                "access_token": token,
+                "user_id": userId,
+                "count": 1000,
+                "v": version,
+                "extended": 1]
+            
+            let url = baseUrl + method
+            AF.request(url, method: .get, parameters: parametrs).responseJSON { response in
+ 
+                if let error = response.error {
+                    resolver.reject(error)
+                }
+                guard let data = response.data else {return}
+                
+                
+                do {
+                    let groupJSON = try JSON(data)["response"]["items"].rawData()
+                    let groups = try JSONDecoder().decode([GroupsModel].self, from: groupJSON)
+                    
+                    resolver.fulfill(groups)
+                } catch {
+                    print (error)
+                }
+                
+            }
+        }
+    }
+    
+
+    //OLD
     func getGroups(completion: @escaping([GroupsModel]) -> ()) {
         let method = "/groups.get"
         let parametrs: Parameters = [
@@ -49,4 +91,7 @@ final class GroupsAPI {
             }
         }
     }
+     
+    
+    
 }
