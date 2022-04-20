@@ -17,22 +17,29 @@ final class NewsFeedAPI{
     let userID = Session.shared.userId
     let version = "5.81"
     
-    func getNewsfeed(completion: @escaping(NewJSON) -> ()) {
+    func getNewsfeed(startFrom: String? = nil, startTime: Int? = nil, completion: @escaping(NewJSON?) -> ()) {
         
         
         let method = "/newsfeed.get"
         
-        let parameters: Parameters = [
+        var parameters: Parameters = [
             "user_id": userID,
             "access_token": token,
             //wall_photo
             "filters":"post,photo,photo_tag,wall_photo",
-            "count": 10,
+            "count": 15,
             "v": version,
-            //            "start_from": 0,
-            "start_time": 0
+//                        "start_from": 0,
+//            "start_time": 0
         ]
         
+        if startTime != nil {
+            parameters["start_time"] = startTime
+        }
+        
+        if startFrom != nil {
+            parameters["start_from"] = startFrom
+        }
         
         
         let url = baseUrl + method
@@ -47,6 +54,7 @@ final class NewsFeedAPI{
             let vkItemJSONArr = json["response"]["items"].arrayValue
             let vkProfilesJSONArr = json["response"]["profiles"].arrayValue
             let vkGroupsJSONArr = json["response"]["groups"].arrayValue
+            let nextFrom = json["response"]["next_from"].stringValue
             
             
             var vkItemsArray: [Item] = []
@@ -94,7 +102,7 @@ final class NewsFeedAPI{
             dispatchGroup.notify(queue: DispatchQueue.main) {
                 
                 debugPrint (response.data?.prettyJSON)
-                let response = Response(items: vkItemsArray, groups: vkGroupsArray, profiles: vkProfilesArray)
+                let response = Response(items: vkItemsArray, groups: vkGroupsArray, profiles: vkProfilesArray, nextFrom: nextFrom)
                 let feed = NewJSON(response: response)
                 completion(feed)
                
