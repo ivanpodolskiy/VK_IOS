@@ -23,6 +23,7 @@ final class GroupsAPI {
     func getGroups(completion: @escaping([GroupsModel]) -> ()) {
         let method = "/groups.get"
         let parametrs: Parameters = [
+            "user-id": userId,
             "access_token": token,
             "user_id": userId,
             "count": 1000,

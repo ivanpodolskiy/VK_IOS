@@ -86,19 +86,20 @@ class GroupsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         let itemGrup = gorupModel2[indexPath.row]
-        
+//
         let url = URL(string: itemGrup.photo100 ?? "")
         if let data = try? Data(contentsOf: url!) {
             cell.imageView?.image = UIImage(data: data)
             cell.textLabel?.text = itemGrup.name
         }
         
+            //Сохранение в Fairebase
         let group = GroupsFirebse(name: itemGrup.name)
-        print (group.name)
+//        print (group.name)
         let cityContainerRef = self.ref.child(group.name).childByAutoId()
         cityContainerRef.setValue(group.toAnyObject())
-        
-    
+//
+//
         return cell
     }
     

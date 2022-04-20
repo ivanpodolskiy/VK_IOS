@@ -10,7 +10,7 @@ import RealmSwift
 
 class PhotoDB {
     
-    let migration = Realm.Configuration(schemaVersion: 4)
+    let migration = Realm.Configuration(schemaVersion: 5)
 
 
     func save(_ itme: [PhotoModel]){

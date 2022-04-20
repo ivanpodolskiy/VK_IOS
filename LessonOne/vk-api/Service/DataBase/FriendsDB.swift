@@ -18,7 +18,7 @@ extension Results {
 
 class FriendsDB {
 
-    let migration = Realm.Configuration(schemaVersion: 5)
+    let migration = Realm.Configuration(schemaVersion: 6)
 
     
     func save(_ itme: [FriendsModel]){

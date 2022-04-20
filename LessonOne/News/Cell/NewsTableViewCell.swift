@@ -8,8 +8,7 @@
 import UIKit
 
 
-class NewsTableViewCell: UITableViewCell, BControllerDelegate
-{
+class NewsTableViewCell: UITableViewCell, BControllerDelegate{
     
     
  

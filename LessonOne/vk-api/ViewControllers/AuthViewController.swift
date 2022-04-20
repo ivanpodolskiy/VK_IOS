@@ -47,14 +47,14 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
             URLQueryItem(name: "display", value: "mobile"),
             URLQueryItem(name: "redirect_uri", value: "https://oauth.vk.com/blank.html"),
             
-            URLQueryItem(name: "scope", value: "262150"),
+            URLQueryItem(name: "scope", value: "270343"),
             URLQueryItem(name: "response_type", value: "token"),
             URLQueryItem(name: "v", value: "5.68")
         ]
         let request = URLRequest(url: urlComponents.url!)
         webView.load(request)
     }
-    
+    //262150
     private func showAlert(titile: String, text: String) {
         
         let alert = UIAlertController(title: titile, message: text, preferredStyle: .alert)
