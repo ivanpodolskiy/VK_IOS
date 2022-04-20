@@ -8,16 +8,14 @@
 import UIKit
 
 class TextTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var textPostLabel: UILabel!
     
-   
-    func conf(tesxt: String?) {
-        let nu = tesxt
-        self.textPostLabel.text = nu
-        textPostLabel.lineBreakMode  = .byWordWrapping
-        textPostLabel.numberOfLines = 0
+    func conf(text: String?) {
+//        DispatchQueue.main.sync {
+            self.textPostLabel.text = text
+            self.textPostLabel.lineBreakMode  = .byWordWrapping
+            self.textPostLabel.numberOfLines = 0
+//        }
     }
-
-    
 }

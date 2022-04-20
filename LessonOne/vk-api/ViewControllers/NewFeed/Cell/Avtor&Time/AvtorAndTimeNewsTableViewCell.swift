@@ -17,28 +17,44 @@ class AuthorAndTimeNewsTableViewCell: UITableViewCell {
     
     func config(name: String, image: String, datePublication: Int) {
         
-        self.nameLable.text = name
         
-        if let url = URL(string: image) {
-            let data = try? Data(contentsOf: url)
-            avatarView?.image = UIImage(data: data!)
-    }
         
-        let dateInt = Double(datePublication) 
-                        let date = Date(timeIntervalSince1970: dateInt)
-                        let dateformatter = DateFormatter()
-        dateformatter.dateStyle = .full
-        print("Publication date is \(date)")
-        self.LastSeenLabel.text = dateformatter.string(from: date)
+        
+        DispatchQueue.global(priority: .background).async {
+            
+            let dateInt = Double(datePublication)
+            let date = Date(timeIntervalSince1970: dateInt)
+            let dateformatter = DateFormatter()
+            dateformatter.dateStyle = .medium
+            print("Publication date is \(date)")
+            
+            let url = URL(string: image)
+            let data = try? Data(contentsOf: url!)
+            
+            DispatchQueue.main.async {
+                
+                self.avatarView?.image = UIImage(data: data!)
+                self.nameLable.text = name
+                self.LastSeenLabel.text = dateformatter.string(from: date)
+            }
+            
+        }
+        
+        
     }
     
     override func layoutSubviews() {
-        avatarView.layer.borderWidth = 0.1
-        avatarView.layer.masksToBounds = true
-        avatarView.layer.borderColor = UIColor.black.cgColor
-        avatarView.layer.cornerRadius = 50/2
-        avatarView.clipsToBounds = true
-
+        DispatchQueue.main.async {
+            self.avatarView.layer.borderWidth = 0.1
+            self.avatarView.layer.masksToBounds = true
+            self.avatarView.layer.borderColor = UIColor.black.cgColor
+            self.avatarView.layer.cornerRadius = 50/2
+            self.avatarView.clipsToBounds = true
+        
+        }
+           
+        
+        
     }
     
 }
