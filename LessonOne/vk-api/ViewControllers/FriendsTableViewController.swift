@@ -15,6 +15,7 @@ class FriendsTableViewController: UITableViewController {
     var friendsModel: Results<FriendsModel>?
 
 
+   
     var token: NotificationToken?
     var friendsDB = FriendsDB()
 

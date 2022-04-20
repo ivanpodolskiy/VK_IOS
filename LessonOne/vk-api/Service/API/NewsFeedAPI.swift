@@ -28,13 +28,16 @@ final class NewsFeedAPI{
             "filters":"post,photo,photo_tag,wall_photo",
             "count": 10,
             "v": version,
-//            "start_from": 0,
+            //            "start_from": 0,
             "start_time": 0
         ]
+        
+        
+        
         let url = baseUrl + method
         AF.request(url, method: .get, parameters: parameters).responseJSON { response in
             guard let data = response.data else { return}
-           //
+            //
             
             let decoder = JSONDecoder()
             let json = JSON(data)
@@ -85,30 +88,18 @@ final class NewsFeedAPI{
                 }
             }
             
-        
+            
             
             dispatchGroup.notify(queue: DispatchQueue.main) {
-
+                
                 debugPrint (response.data?.prettyJSON)
                 let response = Response(items: vkItemsArray, groups: vkGroupsArray, profiles: vkProfilesArray)
                 let feed = NewJSON(response: response)
                 completion(feed)
+               
             }
             
             
-            //
-            
-            
-//            debugPrint (response.data?.prettyJSON)
-//            print (self.userID)
-//
-//            do {
-//                let newJSON = try JSON(data)["response"]["items"].rawData()
-//                let new = try JSONDecoder().decode([Item].self, from: newJSON)
-//                completion(new)
-//            } catch {
-//                print (error)
-//        }
+        }
     }
-}
 }
